@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/Learn"
+        android:enabled="true"
+        android:icon="@drawable/learn"
+        android:title="learn"/>
+
+    <item
+        android:id="@+id/Book"
+        android:enabled="true"
+        android:icon="@drawable/book"
+        android:title="f(x)"/>
+
+    <item
+        android:id="@+id/graph"
+        android:enabled="true"
+        android:icon="@drawable/graph"
+        android:title="analyze"/>
+
+    <item
+        android:id="@+id/mypage"
+        android:enabled="true"
+        android:icon="@drawable/person"
+        android:title="my page"/>
+
+</menu>

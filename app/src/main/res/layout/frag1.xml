@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/남색">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@color/연핑"
+                android:scaleType="centerCrop"
+                android:src="@drawable/im_frag1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/dohyeon"
+                android:text="언제, 어디서나."
+                android:textColor="@color/남색"
+                android:textSize="23sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="21dp"
+                android:layout_marginRight="21dp"
+                android:fontFamily="@font/air"
+                android:text="편하게 문제를 풀고"
+                android:textColor="@color/남색"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/textView2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/air"
+                android:text="실력을 쌓아보자!"
+                android:textColor="@color/남색"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/textView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="40dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/elementary_lv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="@font/dohyeon"
+                        android:text="Elementary Level"
+                        android:textColor="@color/남색"
+                        android:textSize="23sp" />
+
+                    <HorizontalScrollView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="150dp"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/sachic"
+                                android:layout_width="200dp"
+                                android:layout_height="100dp"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="25dp">
+
+                                <ImageView
+                                    android:layout_width="84dp"
+                                    android:layout_height="84dp"
+                                    android:layout_margin="8dp"
+                                    android:background="#00FF0000"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/calc" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginLeft="45dp"
+                                    android:layout_marginTop="23dp"
+                                    android:fontFamily="@font/air"
+                                    android:text="사칙연산"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right"
+                                    android:layout_marginTop="50dp"
+                                    android:layout_marginRight="32dp"
+                                    android:fontFamily="@font/air"
+                                    android:text="20문항"
+                                    android:textSize="15sp" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/bunsu"
+                                android:layout_width="200dp"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="10dp"
+                                android:background="#FFFFFF"
+                                app:cardCornerRadius="25dp">
+
+                                <ImageView
+                                    android:layout_width="84dp"
+                                    android:layout_height="84dp"
+                                    android:layout_margin="8dp"
+                                    android:background="#00FF0000"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/bunsu" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginLeft="45dp"
+                                    android:layout_marginTop="23dp"
+                                    android:fontFamily="@font/air"
+                                    android:text="분수계산"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right"
+                                    android:layout_marginTop="50dp"
+                                    android:layout_marginRight="32dp"
+                                    android:fontFamily="@font/air"
+                                    android:text="20문항"
+                                    android:textSize="15sp" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/sosu"
+                                android:layout_width="200dp"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="10dp"
+                                android:background="#FFFFFF"
+                                app:cardCornerRadius="25dp">
+
+                                <ImageView
+                                    android:layout_width="84dp"
+                                    android:layout_height="84dp"
+                                    android:layout_margin="8dp"
+                                    android:background="#00FF0000"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/sosu" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginLeft="45dp"
+                                    android:layout_marginTop="23dp"
+                                    android:fontFamily="@font/air"
+                                    android:text="소수계산"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right"
+                                    android:layout_marginTop="50dp"
+                                    android:layout_marginRight="32dp"
+                                    android:fontFamily="@font/air"
+                                    android:text="20문항"
+                                    android:textSize="15sp" />
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <TextView
+                        android:id="@+id/middle_lv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="@font/dohyeon"
+                        android:text="Middle Level"
+                        android:textColor="@color/남색"
+                        android:textSize="23sp" />
+
+                    <HorizontalScrollView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="150dp"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/jungsu"
+                                android:layout_width="200dp"
+                                android:layout_height="100dp"
+                                android:layout_marginTop="10dp"
+                                android:background="#FFFFFF"
+                                app:cardCornerRadius="25dp">
+
+                                <ImageButton
+                                    android:layout_width="84dp"
+                                    android:layout_height="84dp"
+                                    android:layout_margin="8dp"
+                                    android:background="#00FF0000"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/jungsu" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginLeft="45dp"
+                                    android:layout_marginTop="23dp"
+                                    android:fontFamily="@font/air"
+                                    android:text="정수계산"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right"
+                                    android:layout_marginTop="50dp"
+                                    android:layout_marginRight="32dp"
+                                    android:fontFamily="@font/air"
+                                    android:text="20문항"
+                                    android:textSize="15sp" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/yeonb"
+                                android:layout_width="200dp"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="10dp"
+                                android:background="#FFFFFF"
+                                app:cardCornerRadius="25dp">
+
+                                <ImageButton
+                                    android:layout_width="84dp"
+                                    android:layout_height="84dp"
+                                    android:layout_margin="8dp"
+                                    android:background="#00FF0000"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/yeonlip" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginLeft="45dp"
+                                    android:layout_marginTop="23dp"
+                                    android:fontFamily="@font/air"
+                                    android:text="연립방정식"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right"
+                                    android:layout_marginTop="50dp"
+                                    android:layout_marginRight="32dp"
+                                    android:fontFamily="@font/air"
+                                    android:text="20문항"
+                                    android:textSize="15sp" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/root"
+                                android:layout_width="200dp"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="10dp"
+                                android:background="#FFFFFF"
+                                app:cardCornerRadius="25dp">
+
+                                <ImageButton
+                                    android:layout_width="84dp"
+                                    android:layout_height="84dp"
+                                    android:layout_margin="8dp"
+                                    android:background="#00FF0000"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/root" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginLeft="45dp"
+                                    android:layout_marginTop="23dp"
+                                    android:fontFamily="@font/air"
+                                    android:text="제곱근"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right"
+                                    android:layout_marginTop="50dp"
+                                    android:layout_marginRight="32dp"
+                                    android:fontFamily="@font/air"
+                                    android:text="20문항"
+                                    android:textSize="15sp" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/insu"
+                                android:layout_width="200dp"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="10dp"
+                                android:background="#FFFFFF"
+                                app:cardCornerRadius="25dp">
+
+                                <ImageButton
+                                    android:layout_width="84dp"
+                                    android:layout_height="84dp"
+                                    android:layout_margin="8dp"
+                                    android:background="#00FF0000"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/insu" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginLeft="45dp"
+                                    android:layout_marginTop="23dp"
+                                    android:fontFamily="@font/air"
+                                    android:text="인수분해"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right"
+                                    android:layout_marginTop="50dp"
+                                    android:layout_marginRight="32dp"
+                                    android:fontFamily="@font/air"
+                                    android:text="20문항"
+                                    android:textSize="15sp" />
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <TextView
+                        android:id="@+id/high_lv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="@font/dohyeon"
+                        android:text="High Level"
+                        android:textColor="@color/남색"
+                        android:textSize="23sp" />
+
+                    <HorizontalScrollView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="150dp"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/dahang"
+                                android:layout_width="200dp"
+                                android:layout_height="100dp"
+                                android:layout_marginTop="10dp"
+                                android:background="#FFFFFF"
+                                app:cardCornerRadius="25dp">
+
+                                <ImageButton
+                                    android:layout_width="84dp"
+                                    android:layout_height="84dp"
+                                    android:layout_margin="8dp"
+                                    android:background="#00FF0000"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/hapcha" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginLeft="45dp"
+                                    android:layout_marginTop="23dp"
+                                    android:fontFamily="@font/air"
+                                    android:text="다항식 연산"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right"
+                                    android:layout_marginTop="50dp"
+                                    android:layout_marginRight="32dp"
+                                    android:fontFamily="@font/air"
+                                    android:text="20문항"
+                                    android:textSize="15sp" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/namugi"
+                                android:layout_width="200dp"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="10dp"
+                                android:background="#FFFFFF"
+                                app:cardCornerRadius="25dp">
+
+                                <ImageButton
+                                    android:layout_width="84dp"
+                                    android:layout_height="84dp"
+                                    android:layout_margin="8dp"
+                                    android:background="#00FF0000"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/hamsu" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginLeft="45dp"
+                                    android:layout_marginTop="23dp"
+                                    android:fontFamily="@font/air"
+                                    android:text="나머지정리"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right"
+                                    android:layout_marginTop="50dp"
+                                    android:layout_marginRight="32dp"
+                                    android:fontFamily="@font/air"
+                                    android:text="20문항"
+                                    android:textSize="15sp" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/log"
+                                android:layout_width="200dp"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="10dp"
+                                android:background="#FFFFFF"
+                                app:cardCornerRadius="25dp">
+
+                                <ImageButton
+                                    android:layout_width="84dp"
+                                    android:layout_height="84dp"
+                                    android:layout_margin="8dp"
+                                    android:background="#00FF0000"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/log" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginLeft="45dp"
+                                    android:layout_marginTop="23dp"
+                                    android:fontFamily="@font/air"
+                                    android:text="로그"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right"
+                                    android:layout_marginTop="50dp"
+                                    android:layout_marginRight="32dp"
+                                    android:fontFamily="@font/air"
+                                    android:text="20문항"
+                                    android:textSize="15sp" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/jisu"
+                                android:layout_width="200dp"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="10dp"
+                                android:background="#FFFFFF"
+                                app:cardCornerRadius="25dp">
+
+                                <ImageButton
+                                    android:layout_width="84dp"
+                                    android:layout_height="84dp"
+                                    android:layout_margin="8dp"
+                                    android:background="#00FF0000"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/jisu" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginLeft="45dp"
+                                    android:layout_marginTop="23dp"
+                                    android:fontFamily="@font/air"
+                                    android:text="지수"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right"
+                                    android:layout_marginTop="50dp"
+                                    android:layout_marginRight="32dp"
+                                    android:fontFamily="@font/air"
+                                    android:text="20문항"
+                                    android:textSize="15sp" />
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <ImageSwitcher
+                        android:id="@+id/is_ban"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="15dp"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

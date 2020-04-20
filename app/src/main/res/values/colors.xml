@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E7BEBE</color>
+    <color name="colorPrimaryDark">#EB9292</color>
+    <color name="colorAccent">#FF2E63</color>
+
+
+    <color name="남색">#010A43</color>
+    <color name="연핑">#E7BEBE</color>
+    <color name="중핑">#EB9292</color>
+    <color name="찐핑">#FF2E63</color>
+</resources>

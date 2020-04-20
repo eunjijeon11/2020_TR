@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="fx">
+        <item>초등</item>
+        <item>중등</item>
+        <item>고등</item>
+    </string-array>
+
+    <string-array name="소단원">
+        <item>덧셈뺄셈</item>
+        <item>곱셈</item>
+        <item>나눗셈</item>
+        <item>분수계산</item>
+        <item>약분</item>
+        <item>통분</item>
+        <item>분수를 소수로 나타내기</item>
+        <item>분수계산</item>
+        <item>소수를 분수로 나타내기</item>
+    </string-array>
+
+    <integer-array name="quiz_e1">
+        <item>@drawable/e1_1</item>
+        <item>@drawable/e1_2</item>
+        <item>@drawable/e1_3</item>
+        <item>@drawable/e1_4</item>
+        <item>@drawable/e1_5</item>
+        <item>@drawable/e1_6</item>
+        <item>@drawable/e1_7</item>
+        <item>@drawable/e1_8</item>
+        <item>@drawable/e1_9</item>
+        <item>@drawable/e1_10</item>
+        <item>@drawable/e1_11</item>
+        <item>@drawable/e1_12</item>
+        <item>@drawable/e1_13</item>
+        <item>@drawable/e1_14</item>
+        <item>@drawable/e1_15</item>
+        <item>@drawable/e1_16</item>
+        <item>@drawable/e1_17</item>
+        <item>@drawable/e1_18</item>
+        <item>@drawable/e1_19</item>
+        <item>@drawable/e1_20</item>
+    </integer-array>
+    <integer-array name="quiz_e2">
+        <item>@drawable/e2_1</item>
+        <item>@drawable/e2_3</item>
+        <item>@drawable/e2_4</item>
+        <item>@drawable/e2_5</item>
+        <item>@drawable/e2_6</item>
+        <item>@drawable/e2_7</item>
+        <item>@drawable/e2_8</item>
+        <item>@drawable/e2_9</item>
+        <item>@drawable/e2_10</item>
+        <item>@drawable/e2_11</item>
+        <item>@drawable/e2_12</item>
+        <item>@drawable/e2_13</item>
+        <item>@drawable/e2_14</item>
+        <item>@drawable/e2_15</item>
+        <item>@drawable/e2_16</item>
+        <item>@drawable/e2_17</item>
+        <item>@drawable/e2_18</item>
+        <item>@drawable/e2_19</item>
+        <item>@drawable/e2_20</item>
+        <item>@drawable/e2_21</item>
+    </integer-array>
+    <integer-array name="quiz_e3">
+        <item>@drawable/e3_1</item>
+        <item>@drawable/e3_2</item>
+        <item>@drawable/e3_3</item>
+        <item>@drawable/e3_4</item>
+        <item>@drawable/e3_5</item>
+        <item>@drawable/e3_6</item>
+        <item>@drawable/e3_7</item>
+        <item>@drawable/e3_8</item>
+        <item>@drawable/e3_9</item>
+        <item>@drawable/e3_10</item>
+        <item>@drawable/e3_11</item>
+        <item>@drawable/e3_12</item>
+        <item>@drawable/e3_13</item>
+        <item>@drawable/e3_14</item>
+        <item>@drawable/e3_15</item>
+        <item>@drawable/e3_16</item>
+        <item>@drawable/e3_17</item>
+        <item>@drawable/e3_18</item>
+        <item>@drawable/e3_19</item>
+        <item>@drawable/e3_20</item>
+    </integer-array>
+    <integer-array name="quiz_m1">
+        <item>@drawable/jungsu_01</item>
+        <item>@drawable/jungsu_02</item>
+        <item>@drawable/jungsu_03</item>
+        <item>@drawable/jungsu_04</item>
+        <item>@drawable/jungsu_05</item>
+        <item>@drawable/jungsu_06</item>
+        <item>@drawable/jungsu_07</item>
+        <item>@drawable/jungsu_08</item>
+        <item>@drawable/jungsu_09</item>
+        <item>@drawable/jungsu_10</item>
+        <item>@drawable/jungsu_11</item>
+        <item>@drawable/jungsu_12</item>
+        <item>@drawable/jungsu_13</item>
+        <item>@drawable/jungsu_14</item>
+        <item>@drawable/jungsu_15</item>
+        <item>@drawable/jungsu_16</item>
+        <item>@drawable/jungsu_17</item>
+        <item>@drawable/jungsu_18</item>
+        <item>@drawable/jungsu_19</item>
+        <item>@drawable/jungsu_20</item>
+    </integer-array>
+    <integer-array name="quiz_m2">
+        <item>@drawable/yonbang_01</item>
+        <item>@drawable/yonbang_02</item>
+        <item>@drawable/yonbang_03</item>
+        <item>@drawable/yonbang_04</item>
+        <item>@drawable/yonbang_05</item>
+        <item>@drawable/yonbang_06</item>
+        <item>@drawable/yonbang_07</item>
+        <item>@drawable/yonbang_08</item>
+        <item>@drawable/yonbang_09</item>
+        <item>@drawable/yonbang_10</item>
+        <item>@drawable/yonbang_11</item>
+        <item>@drawable/yonbang_12</item>
+        <item>@drawable/yonbang_13</item>
+        <item>@drawable/yonbang_14</item>
+        <item>@drawable/yonbang_15</item>
+        <item>@drawable/yonbang_16</item>
+        <item>@drawable/yonbang_17</item>
+        <item>@drawable/yonbang_18</item>
+        <item>@drawable/yonbang_19</item>
+        <item>@drawable/yonbang_20</item>
+    </integer-array>
+
+
+    <string-array name="answer_e1">
+        <item>2</item>
+        <item>155</item>
+        <item>57</item>
+        <item>1060</item>
+        <item>181</item>
+        <item>3</item>
+        <item>36</item>
+        <item>585</item>
+        <item>195</item>
+        <item>527</item>
+        <item>56</item>
+        <item>51</item>
+        <item>135</item>
+        <item>486</item>
+        <item>220</item>
+        <item>4</item>
+        <item>9</item>
+        <item>9</item>
+        <item>3</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="answer_e2">
+        <item>1</item>
+        <item>5/2</item>
+        <item>4/3</item>
+        <item>52/55</item>
+        <item>25/42</item>
+        <item>1/3</item>
+        <item>24/25</item>
+        <item>1/4</item>
+        <item>17/30</item>
+        <item>100/11</item>
+        <item>1</item>
+        <item>1/5</item>
+        <item>2/9</item>
+        <item>1/9</item>
+        <item>30</item>
+        <item>81</item>
+        <item>9/7</item>
+        <item>8/5</item>
+        <item>7/6</item>
+        <item>45/8</item>
+    </string-array>
+    <string-array name="answer_e3">
+        <item>0.7</item>
+        <item>1.7</item>
+        <item>2.94</item>
+        <item>44.37</item>
+        <item>100.099</item>
+        <item>0.78</item>
+        <item>6.07</item>
+        <item>0.981</item>
+        <item>83.68</item>
+        <item>5.223</item>
+        <item>7</item>
+        <item>436.5</item>
+        <item>0.63</item>
+        <item>2.46</item>
+        <item>154.85</item>
+        <item>5</item>
+        <item>10</item>
+        <item>9.102</item>
+        <item>0.1</item>
+        <item>806</item>
+    </string-array>
+    <string-array name="answer_m1">
+        <item>2</item>
+        <item>24</item>
+        <item>-19</item>
+        <item>19</item>
+        <item>98</item>
+        <item>-100</item>
+        <item>-130</item>
+        <item>-14</item>
+        <item>-891</item>
+        <item>60</item>
+        <item>-21</item>
+        <item>99</item>
+        <item>-39</item>
+        <item>-80</item>
+        <item>98</item>
+        <item>-6</item>
+        <item>5</item>
+        <item>-12</item>
+        <item>141</item>
+        <item>-6</item>
+    </string-array>
+    
+
+    <string-array name="fx_element">
+        <item>큰 수</item>
+        <item>각도</item>
+        <item>곱셈과 나눗셈</item>
+        <item>평면도형의 이동</item>
+        <item>막대그래프</item>
+        <item>규칙찾기</item>
+    </string-array>
+    <string-array name="grade_element">
+        <item>초등학교 4학년 1학기</item>
+        <item>초등학교 4학년 1학기</item>
+        <item>초등학교 4학년 1학기</item>
+        <item>초등학교 4학년 1학기</item>
+        <item>초등학교 4학년 1학기</item>
+        <item>초등학교 4학년 1학기</item>
+    </string-array>
+    <integer-array name="im_element">
+        <item>@drawable/fx_e41</item>
+        <item>@drawable/fx_e42</item>
+        <item>@drawable/fx_e43</item>
+        <item>@drawable/fx_e44</item>
+        <item>@drawable/fx_e45</item>
+        <item>@drawable/fx_e46</item>
+    </integer-array>
+
+</resources>
