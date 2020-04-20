@@ -7,10 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.FrameLayout;
-import android.widget.ImageSwitcher;
 import android.widget.ImageView;
-import android.widget.ViewSwitcher;
 
 public class quiz extends AppCompatActivity {
 
