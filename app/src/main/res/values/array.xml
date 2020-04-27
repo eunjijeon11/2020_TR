@@ -19,118 +19,6 @@
         <item>소수를 분수로 나타내기</item>
     </string-array>
 
-    <integer-array name="quiz_e1">
-        <item>@drawable/e1_1</item>
-        <item>@drawable/e1_2</item>
-        <item>@drawable/e1_3</item>
-        <item>@drawable/e1_4</item>
-        <item>@drawable/e1_5</item>
-        <item>@drawable/e1_6</item>
-        <item>@drawable/e1_7</item>
-        <item>@drawable/e1_8</item>
-        <item>@drawable/e1_9</item>
-        <item>@drawable/e1_10</item>
-        <item>@drawable/e1_11</item>
-        <item>@drawable/e1_12</item>
-        <item>@drawable/e1_13</item>
-        <item>@drawable/e1_14</item>
-        <item>@drawable/e1_15</item>
-        <item>@drawable/e1_16</item>
-        <item>@drawable/e1_17</item>
-        <item>@drawable/e1_18</item>
-        <item>@drawable/e1_19</item>
-        <item>@drawable/e1_20</item>
-    </integer-array>
-    <integer-array name="quiz_e2">
-        <item>@drawable/e2_1</item>
-        <item>@drawable/e2_3</item>
-        <item>@drawable/e2_4</item>
-        <item>@drawable/e2_5</item>
-        <item>@drawable/e2_6</item>
-        <item>@drawable/e2_7</item>
-        <item>@drawable/e2_8</item>
-        <item>@drawable/e2_9</item>
-        <item>@drawable/e2_10</item>
-        <item>@drawable/e2_11</item>
-        <item>@drawable/e2_12</item>
-        <item>@drawable/e2_13</item>
-        <item>@drawable/e2_14</item>
-        <item>@drawable/e2_15</item>
-        <item>@drawable/e2_16</item>
-        <item>@drawable/e2_17</item>
-        <item>@drawable/e2_18</item>
-        <item>@drawable/e2_19</item>
-        <item>@drawable/e2_20</item>
-        <item>@drawable/e2_21</item>
-    </integer-array>
-    <integer-array name="quiz_e3">
-        <item>@drawable/e3_1</item>
-        <item>@drawable/e3_2</item>
-        <item>@drawable/e3_3</item>
-        <item>@drawable/e3_4</item>
-        <item>@drawable/e3_5</item>
-        <item>@drawable/e3_6</item>
-        <item>@drawable/e3_7</item>
-        <item>@drawable/e3_8</item>
-        <item>@drawable/e3_9</item>
-        <item>@drawable/e3_10</item>
-        <item>@drawable/e3_11</item>
-        <item>@drawable/e3_12</item>
-        <item>@drawable/e3_13</item>
-        <item>@drawable/e3_14</item>
-        <item>@drawable/e3_15</item>
-        <item>@drawable/e3_16</item>
-        <item>@drawable/e3_17</item>
-        <item>@drawable/e3_18</item>
-        <item>@drawable/e3_19</item>
-        <item>@drawable/e3_20</item>
-    </integer-array>
-    <integer-array name="quiz_m1">
-        <item>@drawable/jungsu_01</item>
-        <item>@drawable/jungsu_02</item>
-        <item>@drawable/jungsu_03</item>
-        <item>@drawable/jungsu_04</item>
-        <item>@drawable/jungsu_05</item>
-        <item>@drawable/jungsu_06</item>
-        <item>@drawable/jungsu_07</item>
-        <item>@drawable/jungsu_08</item>
-        <item>@drawable/jungsu_09</item>
-        <item>@drawable/jungsu_10</item>
-        <item>@drawable/jungsu_11</item>
-        <item>@drawable/jungsu_12</item>
-        <item>@drawable/jungsu_13</item>
-        <item>@drawable/jungsu_14</item>
-        <item>@drawable/jungsu_15</item>
-        <item>@drawable/jungsu_16</item>
-        <item>@drawable/jungsu_17</item>
-        <item>@drawable/jungsu_18</item>
-        <item>@drawable/jungsu_19</item>
-        <item>@drawable/jungsu_20</item>
-    </integer-array>
-    <integer-array name="quiz_m2">
-        <item>@drawable/yonbang_01</item>
-        <item>@drawable/yonbang_02</item>
-        <item>@drawable/yonbang_03</item>
-        <item>@drawable/yonbang_04</item>
-        <item>@drawable/yonbang_05</item>
-        <item>@drawable/yonbang_06</item>
-        <item>@drawable/yonbang_07</item>
-        <item>@drawable/yonbang_08</item>
-        <item>@drawable/yonbang_09</item>
-        <item>@drawable/yonbang_10</item>
-        <item>@drawable/yonbang_11</item>
-        <item>@drawable/yonbang_12</item>
-        <item>@drawable/yonbang_13</item>
-        <item>@drawable/yonbang_14</item>
-        <item>@drawable/yonbang_15</item>
-        <item>@drawable/yonbang_16</item>
-        <item>@drawable/yonbang_17</item>
-        <item>@drawable/yonbang_18</item>
-        <item>@drawable/yonbang_19</item>
-        <item>@drawable/yonbang_20</item>
-    </integer-array>
-
-
     <string-array name="answer_e1">
         <item>2</item>
         <item>155</item>
@@ -219,7 +107,6 @@
         <item>141</item>
         <item>-6</item>
     </string-array>
-    
 
     <string-array name="fx_element">
         <item>큰 수</item>
@@ -237,13 +124,5 @@
         <item>초등학교 4학년 1학기</item>
         <item>초등학교 4학년 1학기</item>
     </string-array>
-    <integer-array name="im_element">
-        <item>@drawable/fx_e41</item>
-        <item>@drawable/fx_e42</item>
-        <item>@drawable/fx_e43</item>
-        <item>@drawable/fx_e44</item>
-        <item>@drawable/fx_e45</item>
-        <item>@drawable/fx_e46</item>
-    </integer-array>
 
 </resources>

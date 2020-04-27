@@ -9,8 +9,7 @@ import android.widget.ListView;
 
 public class Quiz_End extends AppCompatActivity {
 
-    int correct;
-    int wrong;
+    int 점수;
     ListView ox;
     int[] list;
 
@@ -21,9 +20,7 @@ public class Quiz_End extends AppCompatActivity {
 
         ox = (ListView) findViewById(R.id.ox);
 
-        Intent finsh = getIntent();
-        correct = finsh.getExtras().getInt("정답");
-        wrong = finsh.getExtras().getInt("오답");
-        list = finsh.getExtras().getIntArray("리스트");
+        Intent intent = getIntent();
+        점수 = intent.getExtras().getInt("점수");
     }
 }

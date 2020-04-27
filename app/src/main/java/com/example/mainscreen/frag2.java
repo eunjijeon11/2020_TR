@@ -31,7 +31,6 @@ public class frag2 extends Fragment {
         view = inflater.inflate(R.layout.frag2, container, false);
 
         list1 = getResources().getStringArray(R.array.fx_element);
-        Image = getResources().getIntArray(R.array.im_element);
 
         final ArrayAdapter adapter1 = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, list1);
         final fxListviewAdapter adapter2 = new fxListviewAdapter();
