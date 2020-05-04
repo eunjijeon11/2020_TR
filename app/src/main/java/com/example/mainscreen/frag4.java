@@ -66,4 +66,4 @@ public class frag4 extends Fragment {
             }
         }
     }//editprofile에서 이름, 학번, 이미지 받아옴
-}
+}//힘들다
