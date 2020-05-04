@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class Quiz_End extends AppCompatActivity {
 
-    int 점수;
+    int 점수=0;
     ListView ox;
     int[] list;
     TextView score;
