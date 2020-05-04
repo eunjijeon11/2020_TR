@@ -23,9 +23,9 @@ public class Quiz_End extends AppCompatActivity {
         ox = (ListView) findViewById(R.id.ox);
         score = (TextView)findViewById(R.id.score);
 
-        Intent intent = getIntent();
-        점수 = intent.getExtras().getInt("점수");
-        score.setText(점수);
+        Intent quiz_end = getIntent();
+        점수 = quiz_end.getExtras().getInt("점수");
+        score.setText(점수+"점");
 
     }
 }
