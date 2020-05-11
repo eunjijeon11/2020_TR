@@ -1,6 +1,7 @@
 package com.example.mainscreen;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.graphics.BitmapFactory;
@@ -20,7 +21,7 @@ public class quiz extends AppCompatActivity {
 
     ImageView 문제;
     EditText 답란;
-    Button 다음문제;
+    CardView 다음문제;
     String 입력, 파일명, 단원;
     String[] 답;
     TextView quiznum;
@@ -31,6 +32,8 @@ public class quiz extends AppCompatActivity {
     Button btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9, btn_0, btn_minus, btn_slash, btn_dot;
     ImageButton btn_bs;
     InputStream is = null;
+
+    int[] ox = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -192,6 +195,7 @@ public class quiz extends AppCompatActivity {
             }
         });
 
+
         final Intent quiz_end = new Intent(this, Quiz_End.class);
         //다음문제로 넘어가는 거
         다음문제.setOnClickListener(new View.OnClickListener() {
@@ -199,8 +203,9 @@ public class quiz extends AppCompatActivity {
             public void onClick(View v) {
                 입력 = 답란.getText().toString();
                 답란.setText("");
-                if(입력==답[문제넘버]) {
+                if(입력.equals(답[문제넘버 - 1])) {
                     점수++;
+                    ox[문제넘버-1]++;
                 }
 
                 if(문제넘버<20) {
@@ -215,6 +220,8 @@ public class quiz extends AppCompatActivity {
                 }
                 else if(문제넘버==20) {
                     quiz_end.putExtra("점수", 점수);
+                    quiz_end.putExtra("ox", ox);
+                    quiz_end.putExtra("파일명", 파일명);
                     startActivity(quiz_end);
                 }
             }

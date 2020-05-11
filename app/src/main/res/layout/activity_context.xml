@@ -7,14 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".context">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/grid"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/context"
         android:fontFamily="@font/dohyeon"
@@ -78,18 +70,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/소단원명2" />
 
-    <Button
+    <androidx.cardview.widget.CardView
         android:id="@+id/시작"
-        android:layout_width="150dp"
+        app:cardCornerRadius="25dp"
+        app:cardBackgroundColor="@color/연핑"
+        android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginTop="88dp"
-        android:text="START"
-        android:fontFamily="@font/air"
-        android:textSize="18dp"
+        android:layout_marginTop="308dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/소단원명3" />
+        app:layout_constraintTop_toBottomOf="@+id/소단원명3">
+
+        <TextView
+            android:text="START NOW"
+            android:textSize="18sp"
+            android:textColor="@color/남색"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:layout_width="wrap_content"
@@ -99,7 +99,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/시작"
-        app:layout_constraintVertical_bias="0.069" />
+        app:layout_constraintTop_toBottomOf="@+id/시작" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

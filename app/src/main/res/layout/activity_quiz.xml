@@ -13,8 +13,10 @@
         android:id="@+id/tv_quiznum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/남색"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
         android:text="#1"
+        android:textColor="@color/남색"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/문제"
         app:layout_constraintStart_toStartOf="@+id/문제"
@@ -22,7 +24,9 @@
 
     <ImageView
         android:id="@+id/문제"
+        android:scaleType="centerInside"
         android:layout_width="match_parent"
+        android:layout_marginHorizontal="10dp"
         android:layout_height="250dp"
         android:layout_marginTop="56dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -190,12 +194,13 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/다음문제"
-        android:layout_width="150dp"
+        android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="72dp"
         android:backgroundTint="@color/연핑"
         app:cardCornerRadius="25dp"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <TextView
@@ -203,6 +208,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="다음문제"
+            android:textSize="18sp"
             android:textColor="@color/남색" />
 
     </androidx.cardview.widget.CardView>
