@@ -4,18 +4,19 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:background="FFFFFF"
-    android:layout_height="100dp">
+    android:layout_height="80dp">
 
     <ImageView
         android:id="@+id/ox"
         android:scaleType="fitCenter"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:src="@drawable/wrong"/>
+
     <ImageView
         android:id="@+id/ox_quiz"
         android:scaleType="centerCrop"
         android:layout_width="match_parent"
-        android:layout_height="100dp"/>
+        android:layout_height="80dp"/>
     
 </LinearLayout>

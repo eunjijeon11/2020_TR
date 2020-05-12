@@ -1,37 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center_horizontal"
-    android:orientation="vertical"
     tools:context=".Quiz_End">
 
-    <TextView
-        android:text="점수"
-        android:fontFamily="@font/air"
-        android:textSize="20sp"
-        android:textColor="@color/남색"
-        android:layout_marginTop="50dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <TextView
-        android:id="@+id/score"
-        android:text="30점"
-        android:textColor="@color/남색"
-        android:fontFamily="@font/dohyeon"
-        android:textSize="50sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerV"
-        android:layout_marginTop="30dp"
-        android:layout_marginHorizontal="15dp"
-        android:scrollbars="none"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
-</LinearLayout>
+        <TextView
+            android:text="점수"
+            android:fontFamily="@font/air"
+            android:textSize="20sp"
+            android:textColor="@color/남색"
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/score"
+            android:text="30점"
+            android:textColor="@color/남색"
+            android:fontFamily="@font/dohyeon"
+            android:textSize="50sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerV"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="15dp"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fr1done"
+            android:layout_marginVertical="50dp"
+            android:backgroundTint="@color/연핑"
+            app:cardCornerRadius="25dp"
+            android:layout_width="300dp"
+            android:layout_height="50dp">
+
+            <TextView
+                android:text="확인"
+                android:textSize="18sp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

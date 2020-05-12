@@ -1,21 +1,17 @@
 package com.example.mainscreen;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.os.Binder;
 import android.os.Bundle;
-import android.widget.ListView;
+import android.view.View;
 import android.widget.TextView;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.lang.reflect.Array;
-import java.nio.IntBuffer;
 import java.util.Arrays;
 import java.util.List;
 
@@ -25,6 +21,8 @@ public class Quiz_End extends AppCompatActivity {
     TextView score;
     int[] ox;
     String file;
+
+    CardView fr1done;
 
     private RecyclerViewAdapter recyclerViewAdapter;
     RecyclerView recyclerView;
@@ -42,6 +40,7 @@ public class Quiz_End extends AppCompatActivity {
 
         score = (TextView)findViewById(R.id.score);
         recyclerView = findViewById(R.id.recyclerV);
+        fr1done = findViewById(R.id.fr1done);
 
         Intent quiz_end = getIntent();
         점수 = quiz_end.getExtras().getInt("점수");
@@ -99,6 +98,17 @@ public class Quiz_End extends AppCompatActivity {
         }
 
         recyclerViewAdapter.notifyDataSetChanged();
+
+        final Intent intent = new Intent(this, frag3.class);
+        fr1done.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                intent.putExtra("점수", 5*점수);
+                startActivity(intent);
+
+            }
+        });
 
     }
 }

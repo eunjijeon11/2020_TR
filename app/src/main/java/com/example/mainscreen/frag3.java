@@ -1,5 +1,6 @@
 package com.example.mainscreen;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,11 +10,8 @@ import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
-import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
-import java.util.Map;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,6 +21,8 @@ public class frag3 extends Fragment {
 
     private View view;
     private BarChart barChart;
+    private int score;
+    private int index = 0;
 
     @Nullable
     @Override
@@ -31,25 +31,24 @@ public class frag3 extends Fragment {
 
         barChart = (BarChart) view.findViewById(R.id.bc); //barchart 연결
 
-        ArrayList<BarEntry> barEntries = new ArrayList<BarEntry>();
-        //barchart에 들어갈 엔트리 리스트 생성
+        score = -1;
 
-        final BarDataSet barDataSet = new BarDataSet(barEntries, "");
-        barDataSet.setColors(ColorTemplate.COLORFUL_COLORS); //barchart의 환경설정인 bardataset을 만들고 색 설정
+        Intent intent = getActivity().getIntent();
+        score = intent.getExtras().getInt("점수");
 
-        BarData data = new BarData(barDataSet); //데이터 객체 각각에 dataset 넣어주기
-        data.setBarWidth(0.5f); //바 가로길이 0.5로 설정
-
-        barChart.setData(data); //바 UI에 data 연결
-        barChart.animateY(1000); //1초 간격 애니메이션
-        barChart.invalidate(); //refresh
-
-        if (getArguments() != null) {
-            String quiz_name = getArguments().getString("name").toString();
-            int right = getArguments().getInt("correct");
-            int entire = getArguments().getInt("quiz");
-            barEntries.add(new BarEntry(0,(float)right/entire));
+        ArrayList<BarEntry> barEntries = new ArrayList<>();
+        if(score != -1 ) {
+            barEntries.add(new BarEntry(index, score));
+            index++;
         }
+
+        ArrayList<String> labels = new ArrayList<String>();
+        labels.add("사칙연산");
+
+        BarDataSet barDataSet = new BarDataSet(barEntries, "bar");
+
+        BarData data = new BarData(barDataSet);
+        barChart.setData(data);
 
         return view;
     }

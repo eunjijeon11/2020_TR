@@ -5,20 +5,6 @@
     android:layout_height="match_parent"
     android:background="@color/남색">
 
-    <com.google.android.material.appbar.CollapsingToolbarLayout
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/im_frag3" />
-
-    </com.google.android.material.appbar.CollapsingToolbarLayout>
-
     <ScrollView
         android:id="@+id/scrollView3"
         android:layout_width="match_parent"
