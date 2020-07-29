@@ -61,6 +61,7 @@ public class quiz extends AppCompatActivity {
         btn_bs = findViewById(R.id.btn_bs);
 
         Intent start = getIntent();
+        //답 배열
         단원 = start.getStringExtra("단원");
         switch(단원) {
             case "사칙연산":

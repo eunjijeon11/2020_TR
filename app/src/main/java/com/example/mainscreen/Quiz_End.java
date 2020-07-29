@@ -27,10 +27,6 @@ public class Quiz_End extends AppCompatActivity {
     private RecyclerViewAdapter recyclerViewAdapter;
     RecyclerView recyclerView;
 
-    List<Integer> listoxid = Arrays.asList(
-            R.drawable.right,
-            R.drawable.wrong
-    );
     List<Bitmap> listoxquizid;
 
     @Override
@@ -87,10 +83,10 @@ public class Quiz_End extends AppCompatActivity {
             Data data = new Data();
 
             if(ox[i]==1) {
-                data.setoxId(listoxid.get(0));
+                data.setoxId(R.drawable.right);
             }
             else if(ox[i]==0) {
-                data.setoxId(listoxid.get(1));
+                data.setoxId(R.drawable.wrong);
             }
             data.setOxquizId(listoxquizid.get(i));
 
@@ -99,14 +95,13 @@ public class Quiz_End extends AppCompatActivity {
 
         recyclerViewAdapter.notifyDataSetChanged();
 
-        final Intent intent = new Intent(this, frag3.class);
+        final Bundle bundle = new Bundle();
         fr1done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                intent.putExtra("점수", 5*점수);
-                startActivity(intent);
-
+                bundle.putInt("점수", 5*점수);
+                frag3 frag3 = new frag3();
+                frag3.setArguments(bundle);
             }
         });
 

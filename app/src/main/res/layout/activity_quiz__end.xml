@@ -17,7 +17,7 @@
             android:text="점수"
             android:fontFamily="@font/air"
             android:textSize="20sp"
-            android:textColor="@color/남색"
+            android:textColor="@color/darkblue"
             android:layout_marginTop="50dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -25,7 +25,7 @@
         <TextView
             android:id="@+id/score"
             android:text="30점"
-            android:textColor="@color/남색"
+            android:textColor="@color/darkblue"
             android:fontFamily="@font/dohyeon"
             android:textSize="50sp"
             android:layout_width="wrap_content"
@@ -37,12 +37,12 @@
             android:layout_marginHorizontal="15dp"
             android:scrollbars="none"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="500dp"/>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/fr1done"
             android:layout_marginVertical="50dp"
-            android:backgroundTint="@color/연핑"
+            android:backgroundTint="@color/pink1"
             app:cardCornerRadius="25dp"
             android:layout_width="300dp"
             android:layout_height="50dp">

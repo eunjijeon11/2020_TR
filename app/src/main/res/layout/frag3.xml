@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/남색">
+    android:background="@color/darkblue">
 
     <ScrollView
         android:id="@+id/scrollView3"
@@ -23,7 +23,6 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="500dp"
-                android:background="@drawable/border"
                 app:cardCornerRadius="48dp">
 
                 <LinearLayout

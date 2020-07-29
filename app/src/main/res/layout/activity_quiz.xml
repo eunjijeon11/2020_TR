@@ -16,7 +16,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:text="#1"
-        android:textColor="@color/남색"
+        android:textColor="@color/darkblue"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/문제"
         app:layout_constraintStart_toStartOf="@+id/문제"
@@ -57,7 +57,7 @@
 
         <Button
             android:id="@+id/btn_1"
-            android:backgroundTint="@color/남색"
+            android:backgroundTint="@color/darkblue"
             android:textColor="#FFFFFF"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
@@ -66,7 +66,7 @@
 
         <Button
             android:id="@+id/btn_2"
-            android:backgroundTint="@color/남색"
+            android:backgroundTint="@color/darkblue"
             android:textColor="#FFFFFF"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
 
         <Button
             android:id="@+id/btn_3"
-            android:backgroundTint="@color/남색"
+            android:backgroundTint="@color/darkblue"
             android:textColor="#FFFFFF"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
@@ -84,7 +84,7 @@
 
         <Button
             android:id="@+id/btn_4"
-            android:backgroundTint="@color/남색"
+            android:backgroundTint="@color/darkblue"
             android:textColor="#FFFFFF"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
@@ -93,7 +93,7 @@
 
         <Button
             android:id="@+id/btn_5"
-            android:backgroundTint="@color/남색"
+            android:backgroundTint="@color/darkblue"
             android:textColor="#FFFFFF"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
@@ -102,7 +102,7 @@
 
         <Button
             android:id="@+id/btn_minus"
-            android:backgroundTint="@color/남색"
+            android:backgroundTint="@color/darkblue"
             android:textColor="#FFFFFF"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
@@ -111,7 +111,7 @@
 
         <Button
             android:id="@+id/btn_dot"
-            android:backgroundTint="@color/남색"
+            android:backgroundTint="@color/darkblue"
             android:textColor="#FFFFFF"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
@@ -133,7 +133,7 @@
             android:id="@+id/btn_6"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/남색"
+            android:backgroundTint="@color/darkblue"
             android:textColor="#FFFFFF"
             android:text="6"
             android:textSize="20sp" />
@@ -142,7 +142,7 @@
             android:id="@+id/btn_7"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/남색"
+            android:backgroundTint="@color/darkblue"
             android:textColor="#FFFFFF"
             android:text="7"
             android:textSize="20sp" />
@@ -151,7 +151,7 @@
             android:id="@+id/btn_8"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/남색"
+            android:backgroundTint="@color/darkblue"
             android:textColor="#FFFFFF"
             android:text="8"
             android:textSize="20sp" />
@@ -160,7 +160,7 @@
             android:id="@+id/btn_9"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/남색"
+            android:backgroundTint="@color/darkblue"
             android:textColor="#FFFFFF"
             android:text="9"
             android:textSize="20sp" />
@@ -169,7 +169,7 @@
             android:id="@+id/btn_0"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/남색"
+            android:backgroundTint="@color/darkblue"
             android:textColor="#FFFFFF"
             android:text="0"
             android:textSize="20sp" />
@@ -178,7 +178,7 @@
             android:id="@+id/btn_slash"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/남색"
+            android:backgroundTint="@color/darkblue"
             android:textColor="#FFFFFF"
             android:text="/"
             android:textSize="20sp" />
@@ -187,7 +187,7 @@
             android:id="@+id/btn_bs"
             android:layout_width="50dp"
             android:layout_height="51dp"
-            android:backgroundTint="@color/남색"
+            android:backgroundTint="@color/darkblue"
             android:src="@drawable/ic_keyboard_backspace_black_24dp" />
 
     </LinearLayout>
@@ -197,7 +197,7 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="72dp"
-        android:backgroundTint="@color/연핑"
+        android:backgroundTint="@color/pink1"
         app:cardCornerRadius="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -209,7 +209,7 @@
             android:gravity="center"
             android:text="다음문제"
             android:textSize="18sp"
-            android:textColor="@color/남색" />
+            android:textColor="@color/darkblue" />
 
     </androidx.cardview.widget.CardView>
 

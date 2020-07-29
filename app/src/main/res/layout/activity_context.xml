@@ -5,14 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".context">
+    tools:context=".content">
 
     <TextView
-        android:id="@+id/context"
+        android:id="@+id/content"
         android:fontFamily="@font/dohyeon"
         android:text="목차"
         android:textSize="23dp"
-        android:textColor="@color/남색"
+        android:textColor="@color/darkblue"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginTop="100dp"
@@ -26,7 +26,7 @@
         android:id="@+id/소단원명1"
         android:fontFamily="@font/dohyeon"
         android:textSize="23dp"
-        android:textColor="@color/중핑"
+        android:textColor="@color/pink2"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginStart="50dp"
@@ -36,13 +36,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/context" />
+        app:layout_constraintTop_toBottomOf="@+id/content" />
 
     <TextView
         android:id="@+id/소단원명2"
         android:fontFamily="@font/dohyeon"
         android:textSize="23dp"
-        android:textColor="@color/중핑"
+        android:textColor="@color/pink2"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginStart="50dp"
@@ -58,7 +58,7 @@
         android:id="@+id/소단원명3"
         android:fontFamily="@font/dohyeon"
         android:textSize="23dp"
-        android:textColor="@color/중핑"
+        android:textColor="@color/pink2"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginStart="50dp"
@@ -73,7 +73,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/시작"
         app:cardCornerRadius="25dp"
-        app:cardBackgroundColor="@color/연핑"
+        app:cardBackgroundColor="@color/pink1"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="308dp"
@@ -84,7 +84,7 @@
         <TextView
             android:text="START NOW"
             android:textSize="18sp"
-            android:textColor="@color/남색"
+            android:textColor="@color/darkblue"
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>

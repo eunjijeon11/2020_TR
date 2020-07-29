@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class context extends AppCompatActivity {
+public class content extends AppCompatActivity {
 
     private TextView tv_context, 소단원1, 소단원2, 소단원3;
     private CardView button;
@@ -20,7 +20,7 @@ public class context extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_context);
 
-        tv_context = (TextView) findViewById(R.id.context);
+        tv_context = (TextView) findViewById(R.id.content);
         소단원1 = (TextView) findViewById(R.id.소단원명1);
         소단원2 = (TextView) findViewById(R.id.소단원명2);
         소단원3 = (TextView) findViewById(R.id.소단원명3);

@@ -33,17 +33,17 @@ public class frag3 extends Fragment {
 
         score = -1;
 
-        Intent intent = getActivity().getIntent();
-        score = intent.getExtras().getInt("점수");
+        Bundle bundle = getArguments();
+
+        if(bundle != null) {
+            score = bundle.getInt("점수");
+        }
 
         ArrayList<BarEntry> barEntries = new ArrayList<>();
         if(score != -1 ) {
             barEntries.add(new BarEntry(index, score));
             index++;
         }
-
-        ArrayList<String> labels = new ArrayList<String>();
-        labels.add("사칙연산");
 
         BarDataSet barDataSet = new BarDataSet(barEntries, "bar");
 
