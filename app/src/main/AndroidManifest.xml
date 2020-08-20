@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity android:name=".quiz" />
-        <activity android:name=".context" />
+        <activity android:name=".content" />
         <activity android:name=".Quiz_End" />
         <activity android:name=".FXActivity" />
         <activity android:name=".MainActivity">

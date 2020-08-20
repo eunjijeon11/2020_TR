@@ -11,16 +11,16 @@ import android.widget.TextView;
 
 public class content extends AppCompatActivity {
 
-    private TextView tv_context, 소단원1, 소단원2, 소단원3;
+    private TextView tv_content, 소단원1, 소단원2, 소단원3;
     private CardView button;
     private String 단원명, 소단원명1, 소단원명2, 소단원명3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_context);
+        setContentView(R.layout.activity_content);
 
-        tv_context = (TextView) findViewById(R.id.content);
+        tv_content = (TextView) findViewById(R.id.content);
         소단원1 = (TextView) findViewById(R.id.소단원명1);
         소단원2 = (TextView) findViewById(R.id.소단원명2);
         소단원3 = (TextView) findViewById(R.id.소단원명3);
@@ -36,7 +36,7 @@ public class content extends AppCompatActivity {
         소단원명3=intent.getStringExtra("소단원명3");
         //인텐트로 frag1에서 제목과 소단원명 받아옴
 
-        tv_context.setText("-"+단원명);
+        tv_content.setText("-"+단원명);
         소단원1.setText("-"+소단원명1);
         소단원2.setText("-"+소단원명2);
         소단원3.setText("-"+소단원명3);
@@ -48,6 +48,7 @@ public class content extends AppCompatActivity {
             public void onClick(View v) {
                 start_quiz.putExtra("단원",단원명);
                 startActivity(start_quiz);
+                finish();
             }
         });
 

@@ -224,6 +224,7 @@ public class quiz extends AppCompatActivity {
                     quiz_end.putExtra("ox", ox);
                     quiz_end.putExtra("파일명", 파일명);
                     startActivity(quiz_end);
+                    finish();
                 }
             }
         });

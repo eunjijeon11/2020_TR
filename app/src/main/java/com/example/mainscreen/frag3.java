@@ -31,16 +31,8 @@ public class frag3 extends Fragment {
 
         barChart = (BarChart) view.findViewById(R.id.bc); //barchart 연결
 
-        score = -1;
-
-        Bundle bundle = getArguments();
-
-        if(bundle != null) {
-            score = bundle.getInt("점수");
-        }
-
-        ArrayList<BarEntry> barEntries = new ArrayList<>();
-        if(score != -1 ) {
+        /*ArrayList<BarEntry> barEntries = new ArrayList<>();
+        if(score >= 0) {
             barEntries.add(new BarEntry(index, score));
             index++;
         }
@@ -48,7 +40,7 @@ public class frag3 extends Fragment {
         BarDataSet barDataSet = new BarDataSet(barEntries, "bar");
 
         BarData data = new BarData(barDataSet);
-        barChart.setData(data);
+        barChart.setData(data);*/
 
         return view;
     }

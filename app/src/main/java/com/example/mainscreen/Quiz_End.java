@@ -95,13 +95,13 @@ public class Quiz_End extends AppCompatActivity {
 
         recyclerViewAdapter.notifyDataSetChanged();
 
-        final Bundle bundle = new Bundle();
+        final Intent intent = new Intent(this, MainActivity.class);
+
         fr1done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                bundle.putInt("점수", 5*점수);
-                frag3 frag3 = new frag3();
-                frag3.setArguments(bundle);
+                intent.putExtra("score", 점수);
+                startActivity(intent);
             }
         });
 
