@@ -30,7 +30,7 @@
                     android:layout_height="wrap_content"
                     android:text="Learning"
                     android:textSize="33sp"
-                    android:fontFamily="@font/NBpenB"
+                    android:fontFamily="@font/nbpenb"
                     android:textColor="@color/darkblue"/>
 
                 <TextView
@@ -38,13 +38,13 @@
                     android:layout_height="wrap_content"
                     android:text="언제 어디서나 쉽게 공부해보세요."
                     android:textColor="@color/darkblue"
-                    android:fontFamily="@font/NBpenR"
+                    android:fontFamily="@font/nbpenr"
                     android:textSize="20sp"/>
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
-                    android:background="@color/darkblue"
+                    android:background="@color/gray"
                     android:layout_marginTop="15dp"/>
 
                 <TextView
@@ -52,7 +52,7 @@
                     android:layout_height="wrap_content"
                     android:text="학습 진도: 30%"
                     android:textSize="20sp"
-                    android:fontFamily="@font/NBpenR"
+                    android:fontFamily="@font/nbpenr"
                     android:textColor="@color/darkblue"
                     android:gravity="center"
                     android:layout_marginTop="30dp"/>
@@ -72,7 +72,7 @@
                     android:layout_height="wrap_content"
                     android:text="정답률: 80%"
                     android:textSize="20sp"
-                    android:fontFamily="@font/NBpenR"
+                    android:fontFamily="@font/nbpenr"
                     android:textColor="@color/darkblue"
                     android:gravity="center"
                     android:layout_marginTop="20dp"/>
@@ -109,7 +109,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
-                    android:fontFamily="@font/NBpenB"
+                    android:fontFamily="@font/nbpenb"
                     android:text="Elementary Level"
                     android:textColor="@color/darkblue"
                     android:textSize="25sp"/>
@@ -146,7 +146,7 @@
                                 android:layout_marginBottom="9dp"
                                 android:layout_marginLeft="46dp"
                                 android:gravity="center_horizontal"
-                                android:fontFamily="@font/NBpenB"
+                                android:fontFamily="@font/nbpenb"
                                 android:text="사칙연산"
                                 android:textSize="18sp"/>
 
@@ -157,7 +157,7 @@
                                 android:layout_marginTop="13dp"
                                 android:layout_marginLeft="46dp"
                                 android:gravity="center_horizontal"
-                                android:fontFamily="@font/NBpenR"
+                                android:fontFamily="@font/nbpenr"
                                 android:text="20문항"
                                 android:textSize="15sp"/>
                         </androidx.cardview.widget.CardView>
@@ -186,7 +186,7 @@
                                 android:layout_marginBottom="9dp"
                                 android:layout_marginLeft="46dp"
                                 android:gravity="center_horizontal"
-                                android:fontFamily="@font/NBpenB"
+                                android:fontFamily="@font/nbpenb"
                                 android:text="분수계산"
                                 android:textSize="18sp"/>
 
@@ -197,7 +197,7 @@
                                 android:layout_marginTop="13dp"
                                 android:layout_marginLeft="46dp"
                                 android:gravity="center_horizontal"
-                                android:fontFamily="@font/NBpenR"
+                                android:fontFamily="@font/nbpenr"
                                 android:text="20문항"
                                 android:textSize="15sp"/>
                         </androidx.cardview.widget.CardView>
@@ -226,7 +226,7 @@
                                 android:layout_marginBottom="9dp"
                                 android:layout_marginLeft="46dp"
                                 android:gravity="center_horizontal"
-                                android:fontFamily="@font/NBpenB"
+                                android:fontFamily="@font/nbpenb"
                                 android:text="소수계산"
                                 android:textSize="18sp"/>
 
@@ -237,7 +237,7 @@
                                 android:layout_marginTop="13dp"
                                 android:layout_marginLeft="46dp"
                                 android:gravity="center_horizontal"
-                                android:fontFamily="@font/NBpenR"
+                                android:fontFamily="@font/nbpenr"
                                 android:text="20문항"
                                 android:textSize="15sp"/>
                         </androidx.cardview.widget.CardView>
@@ -249,7 +249,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
-                    android:fontFamily="@font/NBpenB"
+                    android:fontFamily="@font/nbpenb"
                     android:text="Middle Level"
                     android:textColor="@color/darkblue"
                     android:textSize="25sp"/>
@@ -287,7 +287,7 @@
                                 android:layout_marginBottom="9dp"
                                 android:layout_marginLeft="46dp"
                                 android:gravity="center_horizontal"
-                                android:fontFamily="@font/NBpenB"
+                                android:fontFamily="@font/nbpenb"
                                 android:text="정수계산"
                                 android:textSize="18sp"/>
 
@@ -298,7 +298,7 @@
                                 android:layout_marginTop="13dp"
                                 android:layout_marginLeft="46dp"
                                 android:gravity="center_horizontal"
-                                android:fontFamily="@font/NBpenR"
+                                android:fontFamily="@font/nbpenr"
                                 android:text="20문항"
                                 android:textSize="15sp"/>
                         </androidx.cardview.widget.CardView>
@@ -327,7 +327,7 @@
                                 android:layout_marginBottom="9dp"
                                 android:layout_marginLeft="46dp"
                                 android:gravity="center_horizontal"
-                                android:fontFamily="@font/NBpenB"
+                                android:fontFamily="@font/nbpenb"
                                 android:text="연립방정식"
                                 android:textSize="18sp"/>
 
@@ -338,7 +338,7 @@
                                 android:layout_marginTop="13dp"
                                 android:layout_marginLeft="46dp"
                                 android:gravity="center_horizontal"
-                                android:fontFamily="@font/NBpenR"
+                                android:fontFamily="@font/nbpenr"
                                 android:text="20문항"
                                 android:textSize="15sp"/>
                         </androidx.cardview.widget.CardView>
@@ -367,7 +367,7 @@
                                 android:layout_marginBottom="9dp"
                                 android:layout_marginLeft="46dp"
                                 android:gravity="center_horizontal"
-                                android:fontFamily="@font/NBpenB"
+                                android:fontFamily="@font/nbpenb"
                                 android:text="제곱근"
                                 android:textSize="18sp"/>
 
@@ -378,7 +378,7 @@
                                 android:layout_marginTop="13dp"
                                 android:layout_marginLeft="46dp"
                                 android:gravity="center_horizontal"
-                                android:fontFamily="@font/NBpenR"
+                                android:fontFamily="@font/nbpenr"
                                 android:text="20문항"
                                 android:textSize="15sp"/>
                         </androidx.cardview.widget.CardView>
@@ -407,7 +407,7 @@
                                 android:layout_marginBottom="9dp"
                                 android:layout_marginLeft="46dp"
                                 android:gravity="center_horizontal"
-                                android:fontFamily="@font/NBpenB"
+                                android:fontFamily="@font/nbpenb"
                                 android:text="인수분해"
                                 android:textSize="18sp"/>
 
@@ -418,7 +418,7 @@
                                 android:layout_marginTop="13dp"
                                 android:layout_marginLeft="46dp"
                                 android:gravity="center_horizontal"
-                                android:fontFamily="@font/NBpenR"
+                                android:fontFamily="@font/nbpenr"
                                 android:text="20문항"
                                 android:textSize="15sp"/>
                         </androidx.cardview.widget.CardView>
@@ -430,7 +430,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
-                    android:fontFamily="@font/NBpenB"
+                    android:fontFamily="@font/nbpenb"
                     android:text="High Level"
                     android:textColor="@color/darkblue"
                     android:textSize="25sp"/>
@@ -468,7 +468,7 @@
                                 android:layout_marginBottom="9dp"
                                 android:layout_marginLeft="46dp"
                                 android:gravity="center_horizontal"
-                                android:fontFamily="@font/NBpenB"
+                                android:fontFamily="@font/nbpenb"
                                 android:text="다항식 연산"
                                 android:textSize="18sp" />
 
@@ -479,7 +479,7 @@
                                 android:layout_marginTop="13dp"
                                 android:layout_marginLeft="46dp"
                                 android:gravity="center_horizontal"
-                                android:fontFamily="@font/NBpenR"
+                                android:fontFamily="@font/nbpenr"
                                 android:text="20문항"
                                 android:textSize="15sp" />
                         </androidx.cardview.widget.CardView>
@@ -508,7 +508,7 @@
                                 android:layout_marginBottom="9dp"
                                 android:layout_marginLeft="46dp"
                                 android:gravity="center_horizontal"
-                                android:fontFamily="@font/NBpenB"
+                                android:fontFamily="@font/nbpenb"
                                 android:text="나머지정리"
                                 android:textSize="18sp" />
 
@@ -519,7 +519,7 @@
                                 android:layout_marginTop="13dp"
                                 android:layout_marginLeft="46dp"
                                 android:gravity="center_horizontal"
-                                android:fontFamily="@font/NBpenR"
+                                android:fontFamily="@font/nbpenr"
                                 android:text="20문항"
                                 android:textSize="15sp" />
                         </androidx.cardview.widget.CardView>
@@ -548,7 +548,7 @@
                                 android:layout_marginBottom="9dp"
                                 android:layout_marginLeft="46dp"
                                 android:gravity="center_horizontal"
-                                android:fontFamily="@font/NBpenB"
+                                android:fontFamily="@font/nbpenb"
                                 android:text="로그"
                                 android:textSize="18sp" />
 
@@ -559,7 +559,7 @@
                                 android:layout_marginTop="13dp"
                                 android:layout_marginLeft="46dp"
                                 android:gravity="center_horizontal"
-                                android:fontFamily="@font/NBpenR"
+                                android:fontFamily="@font/nbpenr"
                                 android:text="20문항"
                                 android:textSize="15sp" />
                         </androidx.cardview.widget.CardView>
@@ -588,7 +588,7 @@
                                 android:layout_marginBottom="9dp"
                                 android:layout_marginLeft="46dp"
                                 android:gravity="center_horizontal"
-                                android:fontFamily="@font/NBpenB"
+                                android:fontFamily="@font/nbpenb"
                                 android:text="지수"
                                 android:textSize="18sp" />
 
@@ -599,7 +599,7 @@
                                 android:layout_marginTop="13dp"
                                 android:layout_marginLeft="46dp"
                                 android:gravity="center_horizontal"
-                                android:fontFamily="@font/NBpenR"
+                                android:fontFamily="@font/nbpenr"
                                 android:text="20문항"
                                 android:textSize="15sp" />
                         </androidx.cardview.widget.CardView>
