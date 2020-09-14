@@ -6,20 +6,51 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Spinner
-        android:id="@+id/spr"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:entries="@array/fx"
-        android:backgroundTint="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ListView
-        android:id="@+id/lst"
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:scrollbars="none"
-        android:layout_marginTop="7dp"/>
+        android:text="search functions"
+        android:textColor="@color/darkblue"
+        android:textSize="33sp"
+        android:fontFamily="@font/penb"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="햇갈리기 쉬운 공식, 개념들을 쉽게 찾아보세요!"
+        android:textSize="20sp"
+        android:textColor="@color/darkblue"
+        android:fontFamily="@font/penr"
+        android:layout_marginLeft="20dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="40dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:entries="@array/fx"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"/>
+
+            <ListView
+                android:id="@+id/lv_fx"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </LinearLayout>

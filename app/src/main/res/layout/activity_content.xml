@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,98 +8,104 @@
     android:layout_height="match_parent"
     tools:context=".content">
 
-    <TextView
-        android:id="@+id/content"
-        android:fontFamily="@font/dohyeon"
-        android:text="목차"
-        android:textSize="23dp"
-        android:textColor="@color/darkblue"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/소단원명1"
-        android:fontFamily="@font/dohyeon"
-        android:textSize="23dp"
-        android:textColor="@color/pink2"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="20dp"
-        android:text="소단원명"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/content" />
-
-    <TextView
-        android:id="@+id/소단원명2"
-        android:fontFamily="@font/dohyeon"
-        android:textSize="23dp"
-        android:textColor="@color/pink2"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="20dp"
-        android:text="소단원명"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/소단원명1" />
-
-    <TextView
-        android:id="@+id/소단원명3"
-        android:fontFamily="@font/dohyeon"
-        android:textSize="23dp"
-        android:textColor="@color/pink2"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="20dp"
-        android:text="소단원명"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/소단원명2" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/시작"
-        app:cardCornerRadius="25dp"
-        app:cardBackgroundColor="@color/pink1"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="308dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/소단원명3">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <TextView
-            android:text="START NOW"
-            android:textSize="18sp"
+            android:id="@+id/content"
+            android:fontFamily="@font/dohyeon"
+            android:text="목차"
+            android:textSize="23dp"
             android:textColor="@color/darkblue"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/소단원명1"
+            android:fontFamily="@font/dohyeon"
+            android:textSize="23dp"
+            android:textColor="@color/pink2"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:text="소단원명"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/content" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="한번 시작하면 완료 전까진 재시작할 수 없습니다."
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/시작" />
+        <TextView
+            android:id="@+id/소단원명2"
+            android:fontFamily="@font/dohyeon"
+            android:textSize="23dp"
+            android:textColor="@color/pink2"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:text="소단원명"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/소단원명1" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/소단원명3"
+            android:fontFamily="@font/dohyeon"
+            android:textSize="23dp"
+            android:textColor="@color/pink2"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:text="소단원명"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/소단원명2" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/시작"
+            app:cardCornerRadius="25dp"
+            app:cardBackgroundColor="@color/pink1"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="308dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/소단원명3">
+
+            <TextView
+                android:text="START NOW"
+                android:textSize="18sp"
+                android:textColor="@color/darkblue"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="한번 시작하면 완료 전까진 재시작할 수 없습니다."
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/시작" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

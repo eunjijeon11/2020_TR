@@ -11,14 +11,15 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class Quiz_End extends AppCompatActivity {
 
-    int 점수;
-    TextView score;
+    int score;
+    TextView score_tv;
     int[] ox;
     String file;
 
@@ -29,18 +30,22 @@ public class Quiz_End extends AppCompatActivity {
 
     List<Bitmap> listoxquizid;
 
+    DBHelper mydb;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz__end);
 
-        score = (TextView)findViewById(R.id.score);
+        score_tv = (TextView)findViewById(R.id.score);
         recyclerView = findViewById(R.id.recyclerV);
         fr1done = findViewById(R.id.fr1done);
 
-        Intent quiz_end = getIntent();
-        점수 = quiz_end.getExtras().getInt("점수");
-        score.setText(5*점수+"점");
+        mydb = new DBHelper(this);
+
+        final Intent quiz_end = getIntent();
+        score = quiz_end.getExtras().getInt("점수");
+        score_tv.setText(5*score+"점");
         ox = quiz_end.getExtras().getIntArray("ox");
         file = quiz_end.getExtras().getString("파일명");
 
@@ -95,13 +100,16 @@ public class Quiz_End extends AppCompatActivity {
 
         recyclerViewAdapter.notifyDataSetChanged();
 
-        final Intent intent = new Intent(this, MainActivity.class);
-
         fr1done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent.putExtra("score", 점수);
-                startActivity(intent);
+                Boolean isInserted = mydb.insertData(file, score);
+                if (isInserted == true) {
+                    Toast.makeText(getApplicationContext(), "입력 성공", Toast.LENGTH_LONG);
+                    finish();
+                }else {
+                    Toast.makeText(getApplicationContext(), "입력 실패", Toast.LENGTH_LONG);
+                }
             }
         });
 
