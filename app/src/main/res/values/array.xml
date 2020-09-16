@@ -6,8 +6,36 @@
         <item>중등</item>
         <item>고등</item>
     </string-array>
+    
+    <string-array name="unit_name">
+        <item>사칙연산</item>
+        <item>분수계산</item>
+        <item>소수계산</item>
+        <item>정수계산</item>
+        <item>연립방정식</item>
+        <item>제곱근</item>
+        <item>연립방정식</item>
+        <item>다항식연산</item>
+        <item>인수분해</item>
+        <item>로그</item>
+        <item>지수</item>
+    </string-array>
 
-    <string-array name="소단원">
+    <string-array name="filename">
+        <item>e1</item>
+        <item>e2</item>
+        <item>e3</item>
+        <item>m1</item>
+        <item>m2</item>
+        <item>m3</item>
+        <item>m4</item>
+        <item>h1</item>
+        <item>h2</item>
+        <item>h3</item>
+        <item>h4</item>
+    </string-array>
+
+    <string-array name="small_unit">
         <item>덧셈뺄셈</item>
         <item>곱셈</item>
         <item>나눗셈</item>
@@ -115,14 +143,59 @@
         <item>평면도형의 이동</item>
         <item>막대그래프</item>
         <item>규칙찾기</item>
+        <item>자연수의 혼합 계산</item>
+        <item>약수와 배수</item>
+        <item>규칙과 대응</item>
+        <item>약분과 통분</item>
+        <item>분수의 덧셈과 뺄셈</item>
+        <item>다각형의 둘레와 넓이</item>
+        <item>분수의 나눗셈</item>
+        <item>각기둥과 각뿔</item>
+        <item>소수의 나눗셈</item>
+        <item>비와 비율</item>
+        <item>여러가지 그래프</item>
+        <item>직육면체의 부피와 넓이</item>
     </string-array>
-    <string-array name="grade_element">
-        <item>초등학교 4학년 1학기</item>
-        <item>초등학교 4학년 1학기</item>
-        <item>초등학교 4학년 1학기</item>
-        <item>초등학교 4학년 1학기</item>
-        <item>초등학교 4학년 1학기</item>
-        <item>초등학교 4학년 1학기</item>
+
+    <string-array name="fx_mid">
+        <item>자연수의 성질</item>
+        <item>정수와 유리수</item>
+    </string-array>
+
+    <string-array name="fx_high">
+        <item>고등공식1</item>
+        <item>고등공식2</item>
+    </string-array>
+
+    <string-array name="file_element">
+        <item>fx_e411</item>
+        <item>fx_e412</item>
+        <item>fx_e413</item>
+        <item>fx_e414</item>
+        <item>fx_e415</item>
+        <item>fx_e416</item>
+        <item>fx_e511</item>
+        <item>fx_e512</item>
+        <item>fx_e513</item>
+        <item>fx_e514</item>
+        <item>fx_e515</item>
+        <item>fx_e516</item>
+        <item>fx_e611</item>
+        <item>fx_e612</item>
+        <item>fx_e613</item>
+        <item>fx_e614</item>
+        <item>fx_e615</item>
+        <item>fx_e616</item>
+    </string-array>
+
+    <string-array name="file_mid">
+        <item>fx_m11</item>
+        <item>fx_m12</item>
+    </string-array>
+
+    <string-array name="file_high">
+        <item>fx_h11</item>
+        <item>fx_h12</item>
     </string-array>
 
 </resources>

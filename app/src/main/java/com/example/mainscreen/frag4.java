@@ -1,9 +1,14 @@
 package com.example.mainscreen;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.ShapeDrawable;
+import android.graphics.drawable.shapes.OvalShape;
+import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
@@ -20,6 +25,7 @@ import java.io.InputStream;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -29,15 +35,29 @@ public class frag4 extends Fragment {
     private ImageButton btn_pro;
     private TextView name;
     private TextView number;
+    private ImageView profile_iv;
+    private Bitmap bitmap;
+
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull final LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.frag4, container, false);
 
+        profile_iv = view.findViewById(R.id.profile);
         name = (TextView) view.findViewById(R.id.name);
         number = (TextView) view.findViewById(R.id.number);
         btn_pro = (ImageButton) view.findViewById(R.id.btn_pro); //UI연결
+
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+        editor = sharedPreferences.edit();
+
+        if (!sharedPreferences.getString("username", "").equals("")) {
+            name.setText(sharedPreferences.getString("usernum", ""));
+            number.setText(sharedPreferences.getString("usernum", ""));
+        }
 
         btn_pro.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,9 +77,13 @@ public class frag4 extends Fragment {
                 try {
                     String username = data.getStringExtra("username");
                     String usernum = data.getStringExtra("usernum");
+                    String profile = data.getStringExtra("profile_img");
+
+                    bitmap = BitmapFactory.decodeStream(getActivity().openFileInput(profile));
 
                     name.setText(username);
                     number.setText(usernum);
+                    profile_iv.setImageBitmap(bitmap);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

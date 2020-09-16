@@ -1,5 +1,6 @@
 package com.example.mainscreen;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
@@ -7,6 +8,7 @@ import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.text.Editable;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,15 +21,15 @@ import java.io.InputStream;
 
 public class quiz extends AppCompatActivity {
 
-    ImageView 문제;
-    EditText 답란;
-    CardView 다음문제;
-    String 입력, 파일명, 단원;
-    String[] 답;
+    ImageView quiz_iv;
+    EditText answer_et;
+    CardView next_quiz;
+    String answer, filename, content;
+    String[] answer_arr;
     TextView quiznum;
 
-    int 문제넘버 = 1;
-    int 점수=0;
+    int quiz_num = 1;
+    int score = 0;
 
     Button btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9, btn_0, btn_minus, btn_slash, btn_dot;
     ImageButton btn_bs;
@@ -35,14 +37,16 @@ public class quiz extends AppCompatActivity {
 
     int[] ox = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 
+    Intent start;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
-        문제 = findViewById(R.id.문제);
-        답란 = findViewById(R.id.답란);
-        다음문제 = findViewById(R.id.다음문제);
+        quiz_iv = findViewById(R.id.문제);
+        answer_et = findViewById(R.id.답란);
+        next_quiz = findViewById(R.id.다음문제);
         quiznum = findViewById(R.id.tv_quiznum);
 
         btn_1 = findViewById(R.id.btn_1);
@@ -60,35 +64,35 @@ public class quiz extends AppCompatActivity {
         btn_minus = findViewById(R.id.btn_minus);
         btn_bs = findViewById(R.id.btn_bs);
 
-        Intent start = getIntent();
+        start = getIntent();
         //답 배열
-        단원 = start.getStringExtra("단원");
-        switch(단원) {
+        content = start.getStringExtra("단원");
+        switch(content) {
             case "사칙연산":
-                답 = getResources().getStringArray(R.array.answer_e1);
-                파일명 = "e1";
+                answer_arr = getResources().getStringArray(R.array.answer_e1);
+                filename = "e1";
                 break;
             case "분수":
-                답 = getResources().getStringArray(R.array.answer_e2);
-                파일명 = "e2";
+                answer_arr = getResources().getStringArray(R.array.answer_e2);
+                filename = "e2";
                 break;
             case "소수":
-                답 = getResources().getStringArray(R.array.answer_e3);
-                파일명 = "e3";
+                answer_arr = getResources().getStringArray(R.array.answer_e3);
+                filename = "e3";
                 break;
             case "정수":
-                답 = getResources().getStringArray(R.array.answer_m1);
-                파일명 = "m1";
+                answer_arr = getResources().getStringArray(R.array.answer_m1);
+                filename = "m1";
                 break;
             case "연방":
-                답 = getResources().getStringArray(R.array.answer_m1);
-                파일명 = "m2";
+                answer_arr = getResources().getStringArray(R.array.answer_m1);
+                filename = "m2";
         }
 
         //문제 이미지 넘어가는 거
         try {
-            is = getResources().getAssets().open("quiz/"+파일명+"_1.jpg");
-            문제.setImageBitmap(BitmapFactory.decodeStream(is));
+            is = getResources().getAssets().open("quiz/"+ filename +"_1.jpg");
+            quiz_iv.setImageBitmap(BitmapFactory.decodeStream(is));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -97,101 +101,101 @@ public class quiz extends AppCompatActivity {
         btn_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String temp = 답란.getText()+"1";
-                답란.setText(temp);
+                String temp = answer_et.getText()+"1";
+                answer_et.setText(temp);
             }
         });
         btn_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String temp = 답란.getText()+"2";
-                답란.setText(temp);
+                String temp = answer_et.getText()+"2";
+                answer_et.setText(temp);
             }
         });
         btn_3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String temp = 답란.getText()+"3";
-                답란.setText(temp);
+                String temp = answer_et.getText()+"3";
+                answer_et.setText(temp);
             }
         });
         btn_4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String temp = 답란.getText()+"4";
-                답란.setText(temp);
+                String temp = answer_et.getText()+"4";
+                answer_et.setText(temp);
             }
         });
         btn_5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String temp = 답란.getText()+"5";
-                답란.setText(temp);
+                String temp = answer_et.getText()+"5";
+                answer_et.setText(temp);
             }
         });
         btn_6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String temp = 답란.getText()+"6";
-                답란.setText(temp);
+                String temp = answer_et.getText()+"6";
+                answer_et.setText(temp);
             }
         });
         btn_7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String temp = 답란.getText()+"7";
-                답란.setText(temp);
+                String temp = answer_et.getText()+"7";
+                answer_et.setText(temp);
             }
         });
         btn_8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String temp = 답란.getText()+"8";
-                답란.setText(temp);
+                String temp = answer_et.getText()+"8";
+                answer_et.setText(temp);
             }
         });
         btn_9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String temp = 답란.getText()+"9";
-                답란.setText(temp);
+                String temp = answer_et.getText()+"9";
+                answer_et.setText(temp);
             }
         });
         btn_0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String temp = 답란.getText()+"0";
-                답란.setText(temp);
+                String temp = answer_et.getText()+"0";
+                answer_et.setText(temp);
             }
         });
         btn_dot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String temp = 답란.getText()+".";
-                답란.setText(temp);
+                String temp = answer_et.getText()+".";
+                answer_et.setText(temp);
             }
         });
         btn_minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String temp = 답란.getText()+"-";
-                답란.setText(temp);
+                String temp = answer_et.getText()+"-";
+                answer_et.setText(temp);
             }
         });
         btn_slash.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String temp = 답란.getText()+"/";
-                답란.setText(temp);
+                String temp = answer_et.getText()+"/";
+                answer_et.setText(temp);
             }
         });
         btn_bs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Editable temptext = 답란.getText();
+                Editable temptext = answer_et.getText();
                 if(temptext.length()>0) {
                     temptext.delete(temptext.length()-1, temptext.length());
-                    답란.setText(temptext);
+                    answer_et.setText(temptext);
                 }
             }
         });
@@ -199,35 +203,34 @@ public class quiz extends AppCompatActivity {
 
         final Intent quiz_end = new Intent(this, Quiz_End.class);
         //다음문제로 넘어가는 거
-        다음문제.setOnClickListener(new View.OnClickListener() {
+        next_quiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                입력 = 답란.getText().toString();
-                답란.setText("");
-                if(입력.equals(답[문제넘버 - 1])) {
-                    점수++;
-                    ox[문제넘버-1]++;
+                answer = answer_et.getText().toString();
+                answer_et.setText("");
+                if(answer.equals(answer_arr[quiz_num - 1])) {
+                    score++;
+                    ox[quiz_num -1]++;
                 }
 
-                if(문제넘버<20) {
-                    문제넘버++;
-                    quiznum.setText("#"+문제넘버);
+                if(quiz_num <20) {
+                    quiz_num++;
+                    quiznum.setText("#"+ quiz_num);
                     try {
-                        is = getResources().getAssets().open("quiz/"+파일명+"_"+문제넘버+".jpg");
-                        문제.setImageBitmap(BitmapFactory.decodeStream(is));
+                        is = getResources().getAssets().open("quiz/"+ filename +"_"+ quiz_num +".jpg");
+                        quiz_iv.setImageBitmap(BitmapFactory.decodeStream(is));
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
                 }
-                else if(문제넘버==20) {
-                    quiz_end.putExtra("점수", 점수);
+                else if(quiz_num ==20) {
+                    quiz_end.putExtra("점수", score);
                     quiz_end.putExtra("ox", ox);
-                    quiz_end.putExtra("파일명", 파일명);
+                    quiz_end.putExtra("파일명", filename);
                     startActivity(quiz_end);
                     finish();
                 }
             }
         });
-
     }
 }
