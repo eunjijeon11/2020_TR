@@ -168,24 +168,24 @@
     </string-array>
 
     <string-array name="file_element">
-        <item>fx_e41</item>
-        <item>fx_e42</item>
-        <item>fx_e43</item>
-        <item>fx_e44</item>
-        <item>fx_e45</item>
-        <item>fx_e46</item>
-        <item>fx_e51</item>
-        <item>fx_e52</item>
-        <item>fx_e53</item>
-        <item>fx_e54</item>
-        <item>fx_e55</item>
-        <item>fx_e56</item>
-        <item>fx_e61</item>
-        <item>fx_e62</item>
-        <item>fx_e63</item>
-        <item>fx_e64</item>
-        <item>fx_e65</item>
-        <item>fx_e66</item>
+        <item>fx_e411</item>
+        <item>fx_e412</item>
+        <item>fx_e413</item>
+        <item>fx_e414</item>
+        <item>fx_e415</item>
+        <item>fx_e416</item>
+        <item>fx_e511</item>
+        <item>fx_e512</item>
+        <item>fx_e513</item>
+        <item>fx_e514</item>
+        <item>fx_e515</item>
+        <item>fx_e516</item>
+        <item>fx_e611</item>
+        <item>fx_e612</item>
+        <item>fx_e613</item>
+        <item>fx_e614</item>
+        <item>fx_e615</item>
+        <item>fx_e616</item>
     </string-array>
 
     <string-array name="file_mid">

@@ -127,15 +127,20 @@ public class frag2 extends Fragment {
                 switch (spinner.getSelectedItemPosition()) {
                     case 0:
                         fx_file_list = getResources().getStringArray(R.array.file_element);
+                        intent.putExtra("fx_name", element[position]);
                         break;
                     case 1:
                         fx_file_list = getResources().getStringArray(R.array.file_mid);
+                        intent.putExtra("fx_name", mid[position]);
                         break;
                     case 2:
                         fx_file_list = getResources().getStringArray(R.array.fx_high);
+                        intent.putExtra("fx_name", high[position]);
+                        break;
                 }
-                intent.putExtra("fx_name", fx_file_list[position]);
-                intent.putExtra("fx_grade", 0);
+                intent.putExtra("fx_filename", fx_file_list[position]);
+                intent.putExtra("fx_grade", fx_file_list[position].substring(3,6));
+                startActivity(intent);
             }
         });
 

@@ -9,7 +9,7 @@
     android:background="@color/pink1">
 
     <TextView
-        android:id="@+id/tv_fxtitle"
+        android:id="@+id/tv_fxname"
         android:text="공식이름"
         android:textColor="@color/darkblue"
         android:textSize="33sp"
@@ -35,14 +35,14 @@
         android:background="@color/white">
         <LinearLayout
             android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/iv"
-                android:paddingTop="20dp"
-                android:paddingLeft="10dp"
-                android:scaleType="fitStart"
+                android:adjustViewBounds="true"
                 android:src="@drawable/wrong"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
