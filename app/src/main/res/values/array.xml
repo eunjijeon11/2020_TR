@@ -137,18 +137,28 @@
     </string-array>
 
     <string-array name="fx_element">
+        <!--4학년 1학기-->
         <item>큰 수</item>
         <item>각도</item>
         <item>곱셈과 나눗셈</item>
         <item>평면도형의 이동</item>
         <item>막대그래프</item>
         <item>규칙찾기</item>
+        <!--4학년 2학기-->
+        <item>분수의 덧셈과 뻴셈</item>
+        <item>삼각형</item>
+        <item>소수의 덧셈과 뻴셈</item>
+        <item>사각형</item>
+        <item>꺾은선그래프</item>
+        <item>다각형</item>
+        <!--5학년 1학기-->
         <item>자연수의 혼합 계산</item>
         <item>약수와 배수</item>
         <item>규칙과 대응</item>
         <item>약분과 통분</item>
         <item>분수의 덧셈과 뺄셈</item>
         <item>다각형의 둘레와 넓이</item>
+        <!--6학년 1학기-->
         <item>분수의 나눗셈</item>
         <item>각기둥과 각뿔</item>
         <item>소수의 나눗셈</item>
@@ -158,8 +168,10 @@
     </string-array>
 
     <string-array name="fx_mid">
+        <!--1학년 1학기-->
         <item>자연수의 성질</item>
         <item>정수와 유리수</item>
+        <item>문자와 식</item>
     </string-array>
 
     <string-array name="fx_high">
@@ -174,12 +186,21 @@
         <item>fx_e414</item>
         <item>fx_e415</item>
         <item>fx_e416</item>
+
+        <item>fx_e421</item>
+        <item>fx_e422</item>
+        <item>fx_e423</item>
+        <item>fx_e424</item>
+        <item>fx_e425</item>
+        <item>fx_e426</item>
+
         <item>fx_e511</item>
         <item>fx_e512</item>
         <item>fx_e513</item>
         <item>fx_e514</item>
         <item>fx_e515</item>
         <item>fx_e516</item>
+
         <item>fx_e611</item>
         <item>fx_e612</item>
         <item>fx_e613</item>
@@ -189,13 +210,14 @@
     </string-array>
 
     <string-array name="file_mid">
-        <item>fx_m11</item>
-        <item>fx_m12</item>
+        <item>fx_m111</item>
+        <item>fx_m112</item>
+        <item>fx_m113</item>
     </string-array>
 
     <string-array name="file_high">
-        <item>fx_h11</item>
-        <item>fx_h12</item>
+        <item>fx_h111</item>
+        <item>fx_h112</item>
     </string-array>
 
 </resources>
