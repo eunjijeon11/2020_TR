@@ -2,9 +2,11 @@ package com.example.mainscreen;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.VoiceInteractor;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -30,8 +32,6 @@ public class Quiz_End extends AppCompatActivity {
 
     List<Bitmap> listoxquizid;
 
-    DBHelper mydb;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,8 +40,6 @@ public class Quiz_End extends AppCompatActivity {
         score_tv = (TextView)findViewById(R.id.score);
         recyclerView = findViewById(R.id.recyclerV);
         fr1done = findViewById(R.id.fr1done);
-
-        mydb = new DBHelper(this);
 
         final Intent quiz_end = getIntent();
         score = quiz_end.getExtras().getInt("점수");
@@ -100,16 +98,19 @@ public class Quiz_End extends AppCompatActivity {
 
         recyclerViewAdapter.notifyDataSetChanged();
 
+        final DBOpenHelper mDbOpenHelper = new DBOpenHelper(this);
+        mDbOpenHelper.open();
+        final LocalBroadcastManager lbm = LocalBroadcastManager.getInstance(this);
+
         fr1done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Boolean isInserted = mydb.insertData(file, score);
-                if (isInserted == true) {
-                    Toast.makeText(getApplicationContext(), "입력 성공", Toast.LENGTH_LONG);
-                    finish();
-                }else {
-                    Toast.makeText(getApplicationContext(), "입력 실패", Toast.LENGTH_LONG);
-                }
+                boolean sendvalue = mDbOpenHelper.insertColumn(file, score);
+                mDbOpenHelper.close();
+                Intent broadcastIntent = new Intent();
+                broadcastIntent.putExtra("sendvalue", sendvalue);
+                lbm.sendBroadcast(broadcastIntent);
+                finish();
             }
         });
 

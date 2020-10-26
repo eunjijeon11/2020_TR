@@ -25,6 +25,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        DBOpenHelper mDbOpenHelper = new DBOpenHelper(this);
+        mDbOpenHelper.open();
+        mDbOpenHelper.create();
+        mDbOpenHelper.close();
+
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
