@@ -41,23 +41,25 @@ public class frag2 extends Fragment {
         mid = getResources().getStringArray(R.array.fx_mid);
         high = getResources().getStringArray(R.array.fx_high);
 
+        //final TextView fx_tv, grade_tv;
+
         final ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_2, android.R.id.text1, element) {
             @NonNull
             @Override
             public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
                 View listview = super.getView(position, convertView, parent);
-                TextView fx_tv = listview.findViewById(android.R.id.text1);
-                TextView grade_tv = listview.findViewById(android.R.id.text2);
+                TextView fx_tv, grade_tv;
+                fx_tv = listview.findViewById(android.R.id.text1);
+                grade_tv = listview.findViewById(android.R.id.text2);
                 fx_tv.setTextSize(18);
 
                 fx_tv.setText(element[position]);
-                if (position<6) {
-                    grade_tv.setText("초등학교 4학년 1학기");
-                } else if (position>=6 && position<12) {
-                    grade_tv.setText("초등학교 5학년 1학기");
-                } else if (position>=12) {
-                    grade_tv.setText("초등학교 6학년 1학기");
-                }
+                if (position < 6) grade_tv.setText("초등학교 4학년 1학기");
+                else if (position < 12) grade_tv.setText("초등학교 4학년 2학기");
+                else if (position < 18) grade_tv.setText("초등학교 5학년 1학기");
+                else if (position < 24) grade_tv.setText("초등학교 5학년 2학기");
+                else if (position < 30) grade_tv.setText("초등학교 6학년 1학기");
+                else grade_tv.setText("초등학교 6학년 2학기");
 
                 return listview;
             }
@@ -67,14 +69,24 @@ public class frag2 extends Fragment {
             @Override
             public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
                 View listview = super.getView(position, convertView, parent);
-                TextView fx_tv = listview.findViewById(android.R.id.text1);
-                TextView grade_tv = listview.findViewById(android.R.id.text2);
+                TextView fx_tv, grade_tv;
+                fx_tv = listview.findViewById(android.R.id.text1);
+                grade_tv = listview.findViewById(android.R.id.text2);
+                fx_tv.setTextSize(18);
 
                 fx_tv.setText(mid[position]);
-                if (position<2) {
+                if (position < 5) {
                     grade_tv.setText("중학교 1학년 1학기");
-                } else if (position>=2) {
+                } else if (position < 11) {
+                    grade_tv.setText("중학교 1학년 2학기");
+                } else if (position < 18) {
                     grade_tv.setText("중학교 2학년 1학기");
+                } else if (position < 24) {
+                    grade_tv.setText("중학교 2학년 2학기");
+                } else if (position < 32) {
+                    grade_tv.setText("중학교 3학년 1학기");
+                } else {
+                    grade_tv.setText("중학교 3학년 2학기");
                 }
 
                 return listview;
@@ -85,15 +97,12 @@ public class frag2 extends Fragment {
             @Override
             public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
                 View listview = super.getView(position, convertView, parent);
-                TextView fx_tv = listview.findViewById(android.R.id.text1);
-                TextView grade_tv = listview.findViewById(android.R.id.text2);
+                TextView fx_tv, grade_tv;
+                fx_tv = listview.findViewById(android.R.id.text1);
+                grade_tv = listview.findViewById(android.R.id.text2);
+                fx_tv.setTextSize(18);
 
                 fx_tv.setText(high[position]);
-                if (position<1) {
-                    grade_tv.setText("고등학교 1학년 1학기");
-                } else if (position>=1) {
-                    grade_tv.setText("고등학교 1학년 2학기");
-                }
                 return listview;
             }
         };
@@ -128,18 +137,19 @@ public class frag2 extends Fragment {
                     case 0:
                         fx_file_list = getResources().getStringArray(R.array.file_element);
                         intent.putExtra("fx_name", element[position]);
+                        intent.putExtra("fx_grade", fx_file_list[position].substring(3,6));
                         break;
                     case 1:
                         fx_file_list = getResources().getStringArray(R.array.file_mid);
                         intent.putExtra("fx_name", mid[position]);
+                        intent.putExtra("fx_grade", fx_file_list[position].substring(3,6));
                         break;
                     case 2:
-                        fx_file_list = getResources().getStringArray(R.array.fx_high);
+                        fx_file_list = getResources().getStringArray(R.array.file_high);
                         intent.putExtra("fx_name", high[position]);
                         break;
                 }
                 intent.putExtra("fx_filename", fx_file_list[position]);
-                intent.putExtra("fx_grade", fx_file_list[position].substring(3,6));
                 startActivity(intent);
             }
         });

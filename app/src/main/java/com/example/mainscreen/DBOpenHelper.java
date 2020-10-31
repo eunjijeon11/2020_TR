@@ -12,7 +12,7 @@ import androidx.annotation.Nullable;
 public class DBOpenHelper {
 
     private static final String DB_NAME = "ScoreDataBase.db";
-    private static final int DB_Version = 1;
+    private static final int DB_Version = 3;
     private static SQLiteDatabase mDB;
     private DatabaseHelper mDBHelper;
     private Context mContext;
@@ -53,10 +53,11 @@ public class DBOpenHelper {
         mDB.close();
     }
 
-    public boolean insertColumn(String filename, int score) {
+    public boolean insertColumn(String filename, int score, String date) {
         ContentValues values = new ContentValues();
         values.put(DataBases.CreateDB.FILENAME, filename);
         values.put(DataBases.CreateDB.SCORE, score);
+        values.put(DataBases.CreateDB.Date, date);
         return mDB.insert(DataBases.CreateDB.TABLENAME, null, values) > 0;
     }
 
@@ -64,10 +65,11 @@ public class DBOpenHelper {
         return mDB.query(DataBases.CreateDB.TABLENAME, null,null,null,null, null, null);
     }
 
-    public boolean updateColumn(long id, String filename, int score) {
+    public boolean updateColumn(long id, String filename, int score, String date) {
         ContentValues values = new ContentValues();
         values.put(DataBases.CreateDB.FILENAME, filename);
         values.put(DataBases.CreateDB.SCORE, score);
+        values.put(DataBases.CreateDB.Date, date);
         return mDB.update(DataBases.CreateDB.TABLENAME, values, "_id=" + id, null) > 0;
     }
 

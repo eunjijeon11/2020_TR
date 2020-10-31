@@ -1,6 +1,5 @@
 package com.example.mainscreen;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
@@ -8,7 +7,6 @@ import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.text.Editable;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,7 +24,7 @@ public class quiz extends AppCompatActivity {
     CardView next_quiz;
     String answer, filename, content;
     String[] answer_arr;
-    TextView quiznum;
+    TextView quizNum;
 
     int quiz_num = 1;
     int score = 0;
@@ -47,7 +45,7 @@ public class quiz extends AppCompatActivity {
         quiz_iv = findViewById(R.id.문제);
         answer_et = findViewById(R.id.답란);
         next_quiz = findViewById(R.id.다음문제);
-        quiznum = findViewById(R.id.tv_quiznum);
+        quizNum = findViewById(R.id.tv_quiznum);
 
         btn_1 = findViewById(R.id.btn_1);
         btn_2 = findViewById(R.id.btn_2);
@@ -72,21 +70,46 @@ public class quiz extends AppCompatActivity {
                 answer_arr = getResources().getStringArray(R.array.answer_e1);
                 filename = "e1";
                 break;
-            case "분수":
+            case "분수계산":
                 answer_arr = getResources().getStringArray(R.array.answer_e2);
                 filename = "e2";
                 break;
-            case "소수":
+            case "소수계산":
                 answer_arr = getResources().getStringArray(R.array.answer_e3);
                 filename = "e3";
                 break;
-            case "정수":
+            case "정수계산":
                 answer_arr = getResources().getStringArray(R.array.answer_m1);
                 filename = "m1";
                 break;
-            case "연방":
-                answer_arr = getResources().getStringArray(R.array.answer_m1);
+            case "연립방정식":
+                answer_arr = getResources().getStringArray(R.array.answer_m2);
                 filename = "m2";
+                break;
+            case "제곱근":
+                answer_arr = getResources().getStringArray(R.array.answer_m3);
+                filename = "m2";
+                break;
+            case "인수분해":
+                answer_arr = getResources().getStringArray(R.array.answer_m4);
+                filename = "m2";
+                break;
+            case "다항식 연산":
+                answer_arr = getResources().getStringArray(R.array.answer_h1);
+                filename = "m2";
+                break;
+            case "나머지정리":
+                answer_arr = getResources().getStringArray(R.array.answer_h2);
+                filename = "m2";
+                break;
+            case "로그":
+                answer_arr = getResources().getStringArray(R.array.answer_h3);
+                filename = "m2";
+                break;
+            case "지수":
+                answer_arr = getResources().getStringArray(R.array.answer_h4);
+                filename = "m2";
+                break;
         }
 
         //문제 이미지 넘어가는 거
@@ -215,7 +238,7 @@ public class quiz extends AppCompatActivity {
 
                 if(quiz_num <20) {
                     quiz_num++;
-                    quiznum.setText("#"+ quiz_num);
+                    quizNum.setText("#"+ quiz_num);
                     try {
                         is = getResources().getAssets().open("quiz/"+ filename +"_"+ quiz_num +".jpg");
                         quiz_iv.setImageBitmap(BitmapFactory.decodeStream(is));
@@ -227,6 +250,7 @@ public class quiz extends AppCompatActivity {
                     quiz_end.putExtra("점수", score);
                     quiz_end.putExtra("ox", ox);
                     quiz_end.putExtra("파일명", filename);
+                    quiz_end.putExtra("unit", content);
                     startActivity(quiz_end);
                     finish();
                 }

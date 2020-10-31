@@ -1,41 +1,30 @@
 package com.example.mainscreen;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.ShapeDrawable;
-import android.graphics.drawable.shapes.OvalShape;
-import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.FileNotFoundException;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 public class frag4 extends Fragment {
 
     private View view;
-    private ImageButton btn_pro;
+    private TextView tv_pro;
     private TextView name;
     private TextView number;
-    private ImageView profile_iv;
+    private ImageView iv_profile;
     private Bitmap bitmap;
 
     SharedPreferences sharedPreferences;
@@ -46,20 +35,26 @@ public class frag4 extends Fragment {
     public View onCreateView(@NonNull final LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.frag4, container, false);
 
-        profile_iv = view.findViewById(R.id.profile);
-        name = (TextView) view.findViewById(R.id.name);
-        number = (TextView) view.findViewById(R.id.number);
-        btn_pro = (ImageButton) view.findViewById(R.id.btn_pro); //UI연결
+        iv_profile = view.findViewById(R.id.profile);
+        name = view.findViewById(R.id.name);
+        number = view.findViewById(R.id.number);
+        tv_pro = view.findViewById(R.id.tv_pro);
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
-        editor = sharedPreferences.edit();
 
         if (!sharedPreferences.getString("username", "").equals("")) {
-            name.setText(sharedPreferences.getString("usernum", ""));
+            name.setText(sharedPreferences.getString("username", ""));
             number.setText(sharedPreferences.getString("usernum", ""));
+            String profile = sharedPreferences.getString("image", "");
+            try {
+                bitmap = BitmapFactory.decodeStream(getActivity().openFileInput(profile));
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            iv_profile.setImageBitmap(bitmap);
         }
 
-        btn_pro.setOnClickListener(new View.OnClickListener() {
+        tv_pro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                     Intent intent = new Intent(getActivity(), editprofile.class);
@@ -83,11 +78,17 @@ public class frag4 extends Fragment {
 
                     name.setText(username);
                     number.setText(usernum);
-                    profile_iv.setImageBitmap(bitmap);
+                    iv_profile.setImageBitmap(bitmap);
+
+                    editor = sharedPreferences.edit();
+                    editor.putString("username", username);
+                    editor.putString("usernum", usernum);
+                    editor.putString("image", profile);
+                    editor.apply();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
         }
     }//editprofile에서 이름, 학번, 이미지 받아옴
-}//힘들다
+}
