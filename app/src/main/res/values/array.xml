@@ -14,11 +14,11 @@
         <item>정수계산</item>
         <item>연립방정식</item>
         <item>제곱근</item>
-        <item>연립방정식</item>
-        <item>다항식연산</item>
         <item>인수분해</item>
-        <item>로그</item>
+        <item>다항식연산</item>
         <item>지수</item>
+        <item>로그</item>
+        <item>점과 거리</item>
     </string-array>
 
     <string-array name="filename">
@@ -39,12 +39,46 @@
         <item>덧셈뺄셈</item>
         <item>곱셈</item>
         <item>나눗셈</item>
-        <item>분수계산</item>
-        <item>약분</item>
-        <item>통분</item>
-        <item>분수를 소수로 나타내기</item>
-        <item>분수계산</item>
-        <item>소수를 분수로 나타내기</item>
+
+        <item>분수의 덧셈뺄셈</item>
+        <item>분수의 곱셈</item>
+        <item>분수의 나눗셈</item>
+
+        <item>소수의 곱셈</item>
+        <item>소수의 곱셈</item>
+        <item>소수의 나눗셈</item>
+
+        <item>정수의 뎃셈뺄셈</item>
+        <item>정수의 곱셈</item>
+        <item>정수의 나눗셈</item>
+
+        <item>연립방정식 해 구하기</item>
+        <item>연립부등식 해 구하기</item>
+        <item></item>
+
+        <item>루트 정의, 조건</item>
+        <item>루트 계산</item>
+        <item></item>
+
+        <item>이차방정식 인수분해</item>
+        <item>복이차방정식 인수분해</item>
+        <item></item>
+
+        <item>다항식 인수분해 공식</item>
+        <item>삼차식 전개</item>
+        <item></item>
+
+        <item>지수</item>
+        <item>지수법칙</item>
+        <item></item>
+
+        <item>로그</item>
+        <item>로그의 성질</item>
+        <item></item>
+
+        <item>점과 점 사이의 거리</item>
+        <item>점과 직선 사이의 거리</item>
+        <item></item>
     </string-array>
 
     <string-array name="answer_e1">

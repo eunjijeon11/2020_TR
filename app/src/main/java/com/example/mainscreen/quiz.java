@@ -88,27 +88,27 @@ public class quiz extends AppCompatActivity {
                 break;
             case "제곱근":
                 answer_arr = getResources().getStringArray(R.array.answer_m3);
-                filename = "m2";
+                filename = "m3";
                 break;
             case "인수분해":
                 answer_arr = getResources().getStringArray(R.array.answer_m4);
-                filename = "m2";
+                filename = "m4";
                 break;
-            case "다항식 연산":
+            case "다항식연산":
                 answer_arr = getResources().getStringArray(R.array.answer_h1);
-                filename = "m2";
+                filename = "h1";
                 break;
-            case "나머지정리":
+            case "지수":
                 answer_arr = getResources().getStringArray(R.array.answer_h2);
-                filename = "m2";
+                filename = "h2";
                 break;
             case "로그":
                 answer_arr = getResources().getStringArray(R.array.answer_h3);
-                filename = "m2";
+                filename = "h3";
                 break;
-            case "지수":
+            case "점과 거리":
                 answer_arr = getResources().getStringArray(R.array.answer_h4);
-                filename = "m2";
+                filename = "h4";
                 break;
         }
 

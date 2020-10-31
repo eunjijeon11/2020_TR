@@ -49,9 +49,9 @@ public class frag1 extends Fragment {
         m3 = view.findViewById(R.id.root);
         m4 = view.findViewById(R.id.insu);
         h1 = view.findViewById(R.id.dahang);
-        h2 = view.findViewById(R.id.namugi);
+        h2 = view.findViewById(R.id.jisu);
         h3 = view.findViewById(R.id.log);
-        h4 = view.findViewById(R.id.jisu);
+        h4 = view.findViewById(R.id.distance);
 
         progress_pb = view.findViewById(R.id.progressbar1);
         correct_rate_pb = view.findViewById(R.id.progressbar2);
@@ -75,7 +75,6 @@ public class frag1 extends Fragment {
             @Override
             public void onClick(View v) {
                 d=0;
-                //Intent intent = new Intent(getActivity(), content.class);
                 intent.putExtra("단원명", "사칙연산");
                 intent.putExtra("소단원명1", content[d]);
                 intent.putExtra("소단원명2", content[d+1]);
@@ -87,7 +86,6 @@ public class frag1 extends Fragment {
             @Override
             public void onClick(View v) {
                 d=3;
-                //Intent intent = new Intent(getActivity(), content.class);
                 intent.putExtra("단원명", "분수계산");
                 intent.putExtra("소단원명1", content[d]);
                 intent.putExtra("소단원명2", content[d+1]);
@@ -99,7 +97,6 @@ public class frag1 extends Fragment {
             @Override
             public void onClick(View v) {
                 d=6;
-                //Intent intent = new Intent(getActivity(), content.class);
                 intent.putExtra("단원명", "소수계산");
                 intent.putExtra("소단원명1", content[d]);
                 intent.putExtra("소단원명2", content[d+1]);
@@ -111,7 +108,6 @@ public class frag1 extends Fragment {
             @Override
             public void onClick(View v) {
                 d=9;
-                //Intent intent = new Intent(getActivity(), content.class);
                 intent.putExtra("단원명", "정수계산");
                 intent.putExtra("소단원명1", content[d]);
                 intent.putExtra("소단원명2", content[d+1]);
@@ -123,7 +119,6 @@ public class frag1 extends Fragment {
             @Override
             public void onClick(View v) {
                 d=12;
-                //Intent intent = new Intent(getActivity(), content.class);
                 intent.putExtra("단원명", "연립방정식");
                 intent.putExtra("소단원명1", content[d]);
                 intent.putExtra("소단원명2", content[d+1]);
@@ -135,7 +130,6 @@ public class frag1 extends Fragment {
             @Override
             public void onClick(View v) {
                 d=15;
-                //Intent intent = new Intent(getActivity(), content.class);
                 intent.putExtra("단원명", "제곱근");
                 intent.putExtra("소단원명1", content[d]);
                 intent.putExtra("소단원명2", content[d+1]);
@@ -147,7 +141,6 @@ public class frag1 extends Fragment {
             @Override
             public void onClick(View v) {
                 d=18;
-                //Intent intent = new Intent(getActivity(), content.class);
                 intent.putExtra("단원명", "인수분해");
                 intent.putExtra("소단원명1", content[d]);
                 intent.putExtra("소단원명2", content[d+1]);
@@ -159,8 +152,7 @@ public class frag1 extends Fragment {
             @Override
             public void onClick(View v) {
                 d=21;
-                //Intent intent = new Intent(getActivity(), content.class);
-                intent.putExtra("단원명", "다항식 연산");
+                intent.putExtra("단원명", "다항식연산");
                 intent.putExtra("소단원명1", content[d]);
                 intent.putExtra("소단원명2", content[d+1]);
                 intent.putExtra("소단원명3", content[d+2]);
@@ -171,8 +163,7 @@ public class frag1 extends Fragment {
             @Override
             public void onClick(View v) {
                 d=24;
-                //Intent intent = new Intent(getActivity(), content.class);
-                intent.putExtra("단원명", "나머지정리");
+                intent.putExtra("단원명", "지수");
                 intent.putExtra("소단원명1", content[d]);
                 intent.putExtra("소단원명2", content[d+1]);
                 intent.putExtra("소단원명3", content[d+2]);
@@ -183,7 +174,6 @@ public class frag1 extends Fragment {
             @Override
             public void onClick(View v) {
                 d=27;
-                //Intent intent = new Intent(getActivity(), content.class);
                 intent.putExtra("단원명", "로그");
                 intent.putExtra("소단원명1", content[d]);
                 intent.putExtra("소단원명2", content[d+1]);
@@ -195,8 +185,7 @@ public class frag1 extends Fragment {
             @Override
             public void onClick(View v) {
                 d=30;
-                //Intent intent = new Intent(getActivity(), content.class);
-                intent.putExtra("단원명", "지수");
+                intent.putExtra("단원명", "점과 거리");
                 intent.putExtra("소단원명1", content[d]);
                 intent.putExtra("소단원명2", content[d+1]);
                 intent.putExtra("소단원명3", content[d+2]);
