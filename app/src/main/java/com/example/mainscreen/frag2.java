@@ -51,12 +51,18 @@ public class frag2 extends Fragment {
                 fx_tv.setTextSize(18);
 
                 fx_tv.setText(element[position]);
-                if (position<6) {
+                if (position < 6) {
                     grade_tv.setText("초등학교 4학년 1학기");
-                } else if (position>=6 && position<12) {
+                } else if (position < 12) {
+                    grade_tv.setText("초등학교 4학년 2학기");
+                } else if (position < 18) {
                     grade_tv.setText("초등학교 5학년 1학기");
-                } else if (position>=12) {
+                } else if (position < 24) {
+                    grade_tv.setText("초등학교 5학년 2학기");
+                } else if (position < 30) {
                     grade_tv.setText("초등학교 6학년 1학기");
+                } else {
+                    grade_tv.setText("초등학교 6학년 2학기");
                 }
 
                 return listview;
@@ -71,10 +77,18 @@ public class frag2 extends Fragment {
                 TextView grade_tv = listview.findViewById(android.R.id.text2);
 
                 fx_tv.setText(mid[position]);
-                if (position<2) {
+                if (position < 5) {
                     grade_tv.setText("중학교 1학년 1학기");
-                } else if (position>=2) {
+                } else if (position < 11) {
+                    grade_tv.setText("중학교 1학년 2학기");
+                } else if (position < 18) {
                     grade_tv.setText("중학교 2학년 1학기");
+                } else if (position < 24) {
+                    grade_tv.setText("중학교 2학년 2학기");
+                } else if (position < 32) {
+                    grade_tv.setText("중학교 3학년 1학기");
+                } else {
+                    grade_tv.setText("중학교 3학년 2학기");
                 }
 
                 return listview;
@@ -89,11 +103,6 @@ public class frag2 extends Fragment {
                 TextView grade_tv = listview.findViewById(android.R.id.text2);
 
                 fx_tv.setText(high[position]);
-                if (position<1) {
-                    grade_tv.setText("고등학교 1학년 1학기");
-                } else if (position>=1) {
-                    grade_tv.setText("고등학교 1학년 2학기");
-                }
                 return listview;
             }
         };

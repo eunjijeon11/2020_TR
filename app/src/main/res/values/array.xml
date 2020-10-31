@@ -135,6 +135,162 @@
         <item>141</item>
         <item>-6</item>
     </string-array>
+    <string-array name="answer_m2">
+        <item>3</item>
+        <item>-2</item>
+        <item>3</item>
+        <item>11</item>
+        <item>8</item>
+        <item>4</item>
+        <item>15</item>
+        <item>12</item>
+        <item>4</item>
+        <item>1</item>
+        <item>-5</item>
+        <item>-1</item>
+        <item>3</item>
+        <item>0</item>
+        <item>4</item>
+        <item>0</item>
+        <item>16</item>
+        <item>45</item>
+        <item>0</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="answer_m3">
+        <item>2</item>
+        <item>11</item>
+        <item>13</item>
+        <item>17</item>
+        <item>25</item>
+        <item>28</item>
+        <item>128</item>
+        <item>22</item>
+        <item>6</item>
+        <item>72</item>
+        <item>49</item>
+        <item>135</item>
+        <item>72</item>
+        <item>6</item>
+        <item>16</item>
+        <item>5</item>
+        <item>40</item>
+        <item>3</item>
+        <item>8</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="answer_m4">
+        <item>0</item>
+        <item>-2</item>
+        <item>9</item>
+        <item>3</item>
+        <item>-4</item>
+        <item>10</item>
+        <item>-2</item>
+        <item>6</item>
+        <item>-21</item>
+        <item>26</item>
+        <item>-1</item>
+        <item>0</item>
+        <item>-6</item>
+        <item>-4</item>
+        <item>0</item>
+        <item>11</item>
+        <item>3</item>
+        <item>3</item>
+        <item>8</item>
+        <item>13</item>
+    </string-array>
+    <string-array name="answer_h1">
+        <item>1</item>
+        <item>1</item>
+        <item>-2</item>
+        <item>-1</item>
+        <item>8</item>
+        <item>0</item>
+        <item>1</item>
+        <item>0</item>
+        <item>8</item>
+        <item>9</item>
+        <item>15</item>
+        <item>6</item>
+        <item>9</item>
+        <item>4</item>
+        <item>3</item>
+        <item>2</item>
+        <item>6</item>
+        <item>0</item>
+        <item>1</item>
+        <item>-1</item>
+    </string-array>
+    <string-array name="answer_h2">
+        <item>7</item>
+        <item>10</item>
+        <item>1</item>
+        <item>5</item>
+        <item>28</item>
+        <item>10</item>
+        <item>24</item>
+        <item>2</item>
+        <item>4</item>
+        <item>3</item>
+        <item>6</item>
+        <item>3</item>
+        <item>15</item>
+        <item>1</item>
+        <item>0</item>
+        <item>25</item>
+        <item>10</item>
+        <item>9</item>
+        <item>3</item>
+        <item>6</item>
+    </string-array>
+    <string-array name="answer_h3">
+        <item>1</item>
+        <item>4</item>
+        <item>3</item>
+        <item>2</item>
+        <item>4</item>
+        <item>8</item>
+        <item>1</item>
+        <item>3</item>
+        <item>1</item>
+        <item>6</item>
+        <item>8</item>
+        <item>6</item>
+        <item>2</item>
+        <item>5</item>
+        <item>9</item>
+        <item>1</item>
+        <item>11</item>
+        <item>1</item>
+        <item>2</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="answer_h4">
+        <item>2</item>
+        <item>10</item>
+        <item>5</item>
+        <item>8</item>
+        <item>37</item>
+        <item>53</item>
+        <item>5</item>
+        <item>29</item>
+        <item>4</item>
+        <item>15</item>
+        <item>5</item>
+        <item>72</item>
+        <item>85</item>
+        <item>20</item>
+        <item>20</item>
+        <item>1</item>
+        <item>0</item>
+        <item>5</item>
+        <item>5</item>
+        <item>17</item>
+    </string-array>
+
+    <!--fx name-->
 
     <string-array name="fx_element">
         <!--4학년 1학기-->
@@ -158,6 +314,13 @@
         <item>약분과 통분</item>
         <item>분수의 덧셈과 뺄셈</item>
         <item>다각형의 둘레와 넓이</item>
+        <!--5학년 2학기-->
+        <item>수의 범위와 어림하기</item>
+        <item>분수의 곱셈</item>
+        <item>합동과 대칭</item>
+        <item>소수의 곱셈</item>
+        <item>직육면체</item>
+        <item>평균과 가능성</item>
         <!--6학년 1학기-->
         <item>분수의 나눗셈</item>
         <item>각기둥과 각뿔</item>
@@ -165,6 +328,13 @@
         <item>비와 비율</item>
         <item>여러가지 그래프</item>
         <item>직육면체의 부피와 넓이</item>
+        <!--6학년 2학기-->
+        <item>분수의 나눗셈</item>
+        <item>소수의 나눗셈</item>
+        <item>공간과 입체</item>
+        <item>비례식과 비례배분</item>
+        <item>원의 넓이</item>
+        <item>원기둥, 원뿔</item>
     </string-array>
 
     <string-array name="fx_mid">
@@ -172,11 +342,58 @@
         <item>자연수의 성질</item>
         <item>정수와 유리수</item>
         <item>문자와 식</item>
+        <item>함수</item>
+        <item>통계</item>
+        <!--1학년 2학기-->
+        <item>도형의 기초_1</item>
+        <item>도형의 기초_2</item>
+        <item>도형의 기초_3</item>
+        <item>평면도형</item>
+        <item>입체도형_1</item>
+        <item>입체도형_2</item>
+        <!--2학년 1학기-->
+        <item>유리수와 순환소수</item>
+        <item>식의 계산</item>
+        <item>연립방정식</item>
+        <item>부등식_1</item>
+        <item>부등식_2</item>
+        <item>일차함수_1</item>
+        <item>일차함수_2</item>
+        <!--2학년 2학기-->
+        <item>확률</item>
+        <item>도형의 성질_1</item>
+        <item>도형의 성질_2</item>
+        <item>도형의 성질_3</item>
+        <item>도형의 닮음_1</item>
+        <item>도형의 닮음_2</item>
+        <item>도형의 닮음_3</item>
+        <!--3학년 1학기-->
+        <item>실수와 그 계산_1</item>
+        <item>실수와 그 계산_2</item>
+        <item>식의 계산</item>
+        <item>이차방정식_1</item>
+        <item>이차방정식_2</item>
+        <item>이차함수_1</item>
+        <item>이차함수_2</item>
+        <item>이차함수_3</item>
+        <!--3학년 2학기-->
+        <item>통계</item>
+        <item>피타고라스의 정리_1</item>
+        <item>피타고라스의 정리_2</item>
+        <item>피타고라스의 정리_3</item>
+        <item>삼각비_1</item>
+        <item>삼각비_2</item>
+        <item>원의 성질_1</item>
+        <item>원의 성질_2</item>
+        <item>원의 성질_3</item>
     </string-array>
 
     <string-array name="fx_high">
-        <item>고등공식1</item>
-        <item>고등공식2</item>
+        <item>고등 수학_1</item>
+        <item>고등 수학_2</item>
+        <item>고등 수학_3</item>
+        <item>고등 수학_4</item>
+        <item>고등 수학_5</item>
     </string-array>
 
     <string-array name="file_element">
@@ -201,23 +418,84 @@
         <item>fx_e515</item>
         <item>fx_e516</item>
 
+        <item>fx_e521</item>
+        <item>fx_e522</item>
+        <item>fx_e523</item>
+        <item>fx_e524</item>
+        <item>fx_e525</item>
+        <item>fx_e526</item>
+
         <item>fx_e611</item>
         <item>fx_e612</item>
         <item>fx_e613</item>
         <item>fx_e614</item>
         <item>fx_e615</item>
         <item>fx_e616</item>
+
+        <item>fx_e621</item>
+        <item>fx_e622</item>
+        <item>fx_e623</item>
+        <item>fx_e624</item>
+        <item>fx_e625</item>
+        <item>fx_e626</item>
     </string-array>
 
     <string-array name="file_mid">
         <item>fx_m111</item>
         <item>fx_m112</item>
         <item>fx_m113</item>
+        <item>fx_m114</item>
+        <item>fx_m115</item>
+
+        <item>fx_m121_1</item>
+        <item>fx_m121_2</item>
+        <item>fx_m121_3</item>
+        <item>fx_m122</item>
+        <item>fx_m123_1</item>
+        <item>fx_m123_2</item>
+
+        <item>fx_m211</item>
+        <item>fx_m212</item>
+        <item>fx_m213</item>
+        <item>fx_m214_1</item>
+        <item>fx_m214_2</item>
+        <item>fx_m215_1</item>
+        <item>fx_m215_2</item>
+
+        <item>fx_m221</item>
+        <item>fx_m222_1</item>
+        <item>fx_m222_2</item>
+        <item>fx_m222_3</item>
+        <item>fx_m223_1</item>
+        <item>fx_m223_2</item>
+        <item>fx_m223_3</item>
+
+        <item>fx_m311_1</item>
+        <item>fx_m311_2</item>
+        <item>fx_m312</item>
+        <item>fx_m313_1</item>
+        <item>fx_m313_2</item>
+        <item>fx_m314_1</item>
+        <item>fx_m314_2</item>
+        <item>fx_m314_3</item>
+
+        <item>fx_m321</item>
+        <item>fx_m322_1</item>
+        <item>fx_m322_2</item>
+        <item>fx_m322_3</item>
+        <item>fx_m323_1</item>
+        <item>fx_m323_2</item>
+        <item>fx_m324_1</item>
+        <item>fx_m324_2</item>
+        <item>fx_m324_3</item>
     </string-array>
 
     <string-array name="file_high">
-        <item>fx_h111</item>
-        <item>fx_h112</item>
+        <item>fx_nh1</item>
+        <item>fx_nh2</item>
+        <item>fx_nh3</item>
+        <item>fx_nh4</item>
+        <item>fx_nh5</item>
     </string-array>
 
 </resources>

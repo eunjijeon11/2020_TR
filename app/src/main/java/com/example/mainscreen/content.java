@@ -34,10 +34,10 @@ public class content extends AppCompatActivity {
         //버튼 연결
 
         intent = getIntent();
-        content=intent.getExtras().getString("단원명");
-        small_1=intent.getStringExtra("소단원명1");
-        small_2=intent.getStringExtra("소단원명2");
-        small_3=intent.getStringExtra("소단원명3");
+        content = intent.getExtras().getString("단원명");
+        small_1 = intent.getStringExtra("소단원명1");
+        small_2 = intent.getStringExtra("소단원명2");
+        small_3 = intent.getStringExtra("소단원명3");
         //인텐트로 frag1에서 제목과 소단원명 받아옴
 
         tv_content.setText("-" + content);

@@ -1,7 +1,9 @@
 package com.example.mainscreen;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
@@ -28,6 +30,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 public class frag4 extends Fragment {
 
@@ -40,6 +43,9 @@ public class frag4 extends Fragment {
 
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
+
+    private BroadcastReceiver mLocalReceiver;
+    private static final String LOCAL_BROADCAST_ACTION = "localBroadcastReceiver";
 
     @Nullable
     @Override
@@ -90,4 +96,25 @@ public class frag4 extends Fragment {
             }
         }
     }//editprofile에서 이름, 학번, 이미지 받아옴
-}//힘들다
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        LocalBroadcastManager lbm = LocalBroadcastManager.getInstance(getContext());
+        IntentFilter intentFilter = new IntentFilter(LOCAL_BROADCAST_ACTION);
+        mLocalReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                name.setText("success");
+            }
+        };
+        lbm.registerReceiver(mLocalReceiver, intentFilter);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        LocalBroadcastManager lbm = LocalBroadcastManager.getInstance(getContext());
+        lbm.unregisterReceiver(mLocalReceiver);
+    }
+}
