@@ -8,7 +8,7 @@ public class DataBases {
         public static final String FILENAME = "filename";
         public static final String SCORE = "score";
         public static final String Date = "date";
-        public static final String TABLENAME = "scoretable";
+        public static final String TABLENAME = "scoreTable";
         public static final String CREATE = "create table if not exists " + TABLENAME +
                 "(" + _ID + " integer primary key autoincrement, "
                 +FILENAME+ " text not null , "

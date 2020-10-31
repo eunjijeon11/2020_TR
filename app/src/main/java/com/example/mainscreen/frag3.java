@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.database.Cursor;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,8 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
@@ -53,11 +56,26 @@ public class frag3 extends Fragment {
 
         set = new BarDataSet(barEntries, "score");
         set.setValueTextColor(getResources().getColor(R.color.darkblue));
-        set.setGradientColor(getResources().getColor(R.color.pink2), getResources().getColor(R.color.pink3));
+        set.setGradientColor(getResources().getColor(R.color.pink3), getResources().getColor(R.color.pink1));
         set.setHighLightColor(getResources().getColor(R.color.pink1));
 
         barData = new BarData(set);
         barChart.setData(barData);
+
+        barChart.animateY(1000);
+        barChart.setNoDataText("학습 내용이 없습니다");
+        barChart.setNoDataTextColor(R.color.darkblue);
+        barChart.setVisibleXRangeMaximum(6);
+        barChart.setMaxVisibleValueCount(6);
+        barChart.setVisibleYRangeMinimum(100, YAxis.AxisDependency.LEFT);
+        barChart.getXAxis().setDrawGridLines(false);
+        barChart.getXAxis().setPosition(XAxis.XAxisPosition.BOTTOM);
+        barChart.moveViewToX(barData.getDataSetCount());
+        barChart.getDescription().setEnabled(false);
+        barChart.getAxisLeft().setAxisMinimum(0);
+        barChart.getAxisRight().setAxisMinimum(0);
+        barChart.setDrawBorders(true);
+        barChart.setBorderWidth((float) 0.5);
 
         return view;
     }

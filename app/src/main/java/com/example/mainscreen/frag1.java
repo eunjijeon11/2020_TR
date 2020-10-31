@@ -2,7 +2,6 @@ package com.example.mainscreen;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
@@ -221,8 +220,8 @@ public class frag1 extends Fragment {
             scoreSum += tempScore;
         }
 
-        for(int i=0; i<is_complete.length; i++) {
-            if(is_complete[i] > 0) {
+        for (int value : is_complete) {
+            if (value > 0) {
                 completeNum++;
             }
         }
