@@ -70,7 +70,7 @@ public class frag3 extends Fragment {
         barChart.setVisibleYRangeMinimum(100, YAxis.AxisDependency.LEFT);
         barChart.getXAxis().setDrawGridLines(false);
         barChart.getXAxis().setPosition(XAxis.XAxisPosition.BOTTOM);
-        barChart.moveViewToX(barData.getDataSetCount());
+        barChart.moveViewToX(barEntries.size());
         barChart.getDescription().setEnabled(false);
         barChart.getAxisLeft().setAxisMinimum(0);
         barChart.getAxisRight().setAxisMinimum(0);
