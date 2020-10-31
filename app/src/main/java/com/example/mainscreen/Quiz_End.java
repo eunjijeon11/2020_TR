@@ -104,15 +104,19 @@ public class Quiz_End extends AppCompatActivity {
         final DBOpenHelper mDbOpenHelper = new DBOpenHelper(this);
         mDbOpenHelper.open();
 
+        final LocalBroadcastManager localBroadcastManager = LocalBroadcastManager.getInstance(this);
+
         fr1done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 long now = System.currentTimeMillis();
                 Date currentTime = new Date(now);
                 String date = new SimpleDateFormat("yyyy/MM/dd", Locale.getDefault()).format(currentTime);
-
-                boolean sendValue = mDbOpenHelper.insertColumn(unit, score*5, date);
+                mDbOpenHelper.insertColumn(unit, score*5, date);
                 mDbOpenHelper.close();
+
+                Intent intent = new Intent("localBC");
+                localBroadcastManager.sendBroadcast(intent);
 
                 finish();
             }

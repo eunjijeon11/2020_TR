@@ -1,26 +1,25 @@
 package com.example.mainscreen;
 
 import android.annotation.SuppressLint;
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
-import static java.lang.Math.max;
 import static java.lang.Math.round;
 
 public class frag1 extends Fragment {
@@ -34,8 +33,7 @@ public class frag1 extends Fragment {
     ProgressBar progress_pb, correct_rate_pb;
     TextView progress_t, correct_rate_t;
     int[] is_complete = {0,0,0,0,0,0,0,0,0,0,0};
-    int[] best_score = {0,0,0,0,0,0,0,0,0,0,0};
-    String[] fileArr;
+    ArrayList<String> fileArr = new ArrayList<>();
 
     @SuppressLint("SetTextI18n")
     @Nullable
@@ -61,41 +59,13 @@ public class frag1 extends Fragment {
         progress_t = view.findViewById(R.id.progress_t);
         correct_rate_t = view.findViewById(R.id.correct_rate_t);} //findViewById
 
-        {content = getResources().getStringArray(R.array.small_unit);
-        fileArr = getResources().getStringArray(R.array.filename);} //get String-array resources
+        content = getResources().getStringArray(R.array.small_unit);
+        String[] tempArr = getResources().getStringArray(R.array.unit_name);
+        fileArr.addAll(Arrays.asList(tempArr));
 
-        //updateProgress();
-        DBOpenHelper dbOpenHelper = new DBOpenHelper(getActivity());
-        dbOpenHelper.open();
-        Cursor cursor = dbOpenHelper.selectColumns();
-        while(cursor.moveToNext()) {
-            String tempFile = cursor.getString(cursor.getColumnIndex("filename"));
-            int tempScore = cursor.getInt(cursor.getColumnIndex("score"));
-            for(int i = 0; i< fileArr.length; i++) {
-                if(tempFile.equals(fileArr[i])) {
-                    is_complete[i]++;
-                    best_score[i] = max(best_score[i], tempScore);
-                }
-            }
-        }
-        dbOpenHelper.close();
+        init();
 
-        float complete_num = 0;
-        float temp = 0f;
-        for (int i=0; i<is_complete.length; i++) {
-            if(is_complete[i]>0) {
-                complete_num++;
-                temp += best_score[i];
-            }
-        }
-
-        progress = round(complete_num/11);
-        progress_pb.setProgress(progress);
-        progress_t.setText("학습진도: " + progress + "%");
-
-        correct_rate = round(temp/(complete_num*20));
-        correct_rate_pb.setProgress(correct_rate);
-        correct_rate_t.setText("정답률: " + correct_rate + "%");
+        updateProgress();
 
         return view;
     }
@@ -238,36 +208,36 @@ public class frag1 extends Fragment {
 
     @SuppressLint("SetTextI18n")
     public void updateProgress() {
+        int completeNum = 0;
+        int scoreSum = 0;
+
         DBOpenHelper dbOpenHelper = new DBOpenHelper(getActivity());
         dbOpenHelper.open();
         Cursor cursor = dbOpenHelper.selectColumns();
         while(cursor.moveToNext()) {
             String tempFile = cursor.getString(cursor.getColumnIndex("filename"));
             int tempScore = cursor.getInt(cursor.getColumnIndex("score"));
-            for(int i = 0; i< fileArr.length; i++) {
-                if(tempFile.equals(fileArr[i])) {
-                    is_complete[i]++;
-                    best_score[i] = max(best_score[i], tempScore);
-                }
-            }
+            is_complete[fileArr.indexOf(tempFile)]++;
+            scoreSum += tempScore;
         }
-        dbOpenHelper.close();
 
-        float complete_num = 0;
-        float temp = 0f;
-        for (int i=0; i<is_complete.length; i++) {
-            if(is_complete[i]>0) {
-                complete_num++;
-                temp += best_score[i];
+        for(int i=0; i<is_complete.length; i++) {
+            if(is_complete[i] > 0) {
+                completeNum++;
             }
         }
 
-        progress = round(complete_num/11);
+        float temp = completeNum/11f * 100;
+        progress = round(temp);
+        correct_rate = scoreSum/cursor.getCount();
+        Log.e("progress", Integer.toString(progress));
+        Log.e("correctRate", Integer.toString(correct_rate));
+
         progress_pb.setProgress(progress);
-        progress_t.setText("학습진도: " + progress + "%");
-
-        correct_rate = round(temp/(complete_num*20));
         correct_rate_pb.setProgress(correct_rate);
+
+        progress_t.setText("학습진도: " + progress + "%");
         correct_rate_t.setText("정답률: " + correct_rate + "%");
+        dbOpenHelper.close();
     }
 }

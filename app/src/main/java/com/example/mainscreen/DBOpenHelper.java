@@ -12,7 +12,7 @@ import androidx.annotation.Nullable;
 public class DBOpenHelper {
 
     private static final String DB_NAME = "ScoreDataBase.db";
-    private static final int DB_Version = 2;
+    private static final int DB_Version = 3;
     private static SQLiteDatabase mDB;
     private DatabaseHelper mDBHelper;
     private Context mContext;
