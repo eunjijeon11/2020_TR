@@ -40,10 +40,10 @@ public class content extends AppCompatActivity {
         small_3 = intent.getStringExtra("소단원명3");
         //인텐트로 frag1에서 제목과 소단원명 받아옴
 
-        tv_content.setText("-" + content);
-        tv_small1.setText("-" + small_1);
-        tv_small2.setText("-" + small_2);
-        tv_small3.setText("-" + small_3);
+        tv_content.setText(content);
+        tv_small1.setText(small_1);
+        tv_small2.setText(small_2);
+        tv_small3.setText(small_3);
         //화면에 표시
 
         final Intent start_quiz= new Intent(this, quiz.class);
