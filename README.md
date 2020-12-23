@@ -9,3 +9,5 @@ This is a high school project:)
 🌼Eunji -make this app  
 🌼Jiyoung -make the quiz  
 🌼suyeon -make the folmula
+
+이 프로젝트는 2020IR 우수작으로 선정되었습니다✨
